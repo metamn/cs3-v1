@@ -1,5 +1,6 @@
 require_relative 'sg/compile'
 require_relative 'sg/generate'
+require_relative 'sg/remove'
 
 class Styleguide
   def initialize
@@ -18,7 +19,7 @@ class Styleguide
       when "g"
         Generate.new @param1
       when "rm"
-        puts "Remove"
+        Remove.new @param1
       when "mv"
         usage if @param2.empty?
         puts "Move"
