@@ -4,7 +4,7 @@ class Utils
   
   def mixin(object) 
     mixin_name = split(object)
-    "mixin #{mixin_name} {}"
+    "@mixin #{mixin_name} {}"
   end
   
   def yaml(object) 

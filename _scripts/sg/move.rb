@@ -40,28 +40,25 @@ class Move
   def rename
     @name1 = @utils.split(@object1)
     @name2 = @utils.split(@object2)
-    
-    if (@name1 != @name2) 
-      rename_css
-      rename_sg
-    end
-  end
-  
-  def rename_css
-    puts "Renaming 'mixin #{@name1}' to '#{@name2}' in #{@css}/#{@object2}.scss"
-    @utils.rename_text_in_file "#{@css}/#{@object2}.scss", "#{@name1}", "#{@name2}"
-  end
-  
-  def rename_sg
-    puts "Renaming 'title: #{@name1}' to '#{@name2}' in #{@sg}/#{@object2}.html"
-    @utils.rename_text_in_file "#{@sg}/#{@object2}.html", "title: #{@name1}", "title: #{@name2}"
-    
-    puts "Renaming 'scss: #{@name1}' to '#{@name2}' in #{@sg}/#{@object2}.html"
-    @utils.rename_text_in_file "#{@sg}/#{@object2}.html", "scss: #{@name1}", "scss: #{@name2}"
+    rename_names if (@name1 != @name2)
     
     @category1 = @utils.split(@object1, 1)
     @category2 = @utils.split(@object2, 1)
+    rename_category if (@category1 != @category2) 
+  end
+  
+  def rename_names
+    puts "Renaming 'mixin #{@name1}' to '#{@name2}' in #{@css}/#{@object2}.scss"
+    @utils.rename_text_in_file "#{@css}/#{@object2}.scss", "#{@name1}", "#{@name2}"
     
+    puts "Renaming 'title: #{@name1}' to '#{@name2}' in #{@sg}/#{@object2}.html"
+    @utils.rename_text_in_file "#{@sg}/#{@object2}.html", "title: #{@name1.capitalize}", "title: #{@name2.capitalize}"
+    
+    puts "Renaming 'scss: #{@name1}' to '#{@name2}' in #{@sg}/#{@object2}.html"
+    @utils.rename_text_in_file "#{@sg}/#{@object2}.html", "scss: #{@name1}", "scss: #{@name2}"
+  end
+  
+  def rename_category
     puts "Renaming 'category: #{@category1}' to '#{@category2}' in #{@sg}/#{@object2}.html"
     @utils.rename_text_in_file "#{@sg}/#{@object2}.html", "category: #{@category1}", "category: #{@category2}"
   end
