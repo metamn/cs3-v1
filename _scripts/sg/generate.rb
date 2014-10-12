@@ -1,3 +1,4 @@
+require_relative 'utils'
 
 class Generate
   def initialize(object)
@@ -7,6 +8,8 @@ class Generate
     @html = @root + "/_includes"
     @css = @root + "/assets/styles"
     @sg = @root + "/styleguide"
+    
+    @utils = Utils.new
     
     generate
   end
@@ -27,12 +30,10 @@ class Generate
   end
   
   def css
-    mixin = "mixin a {}"
-    puts system("echo '#{mixin}' > #{@css}/#{@object}.scss")
+    puts system("echo '#{@utils.mixin(@object)}' > #{@css}/#{@object}.scss")
   end
   
   def sg
-    yaml = "--- /n title: aaa /n ----"
-    puts system("echo '#{yaml}' > #{@sg}/#{@object}.html")
+    puts system("echo '#{@utils.yaml(@object)}' > #{@sg}/#{@object}.html")
   end
 end
