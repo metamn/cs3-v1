@@ -1,4 +1,5 @@
 require_relative 'sg/compile'
+require_relative 'sg/generate'
 
 class Styleguide
   def initialize
@@ -15,7 +16,7 @@ class Styleguide
       when "c"
         Compile.new @param1
       when "g"
-        puts "Generate"
+        Generate.new @param1
       when "rm"
         puts "Remove"
       when "mv"
