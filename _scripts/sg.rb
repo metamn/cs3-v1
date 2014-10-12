@@ -1,45 +1,39 @@
-require 'filewatcher'
+require_relative 'sg/compile'
 
-
-# Directories and files
-root = Dir.pwd
-destination = '_site/assets/styles'
-extension = '*.liquid'
-
-
-
-# Checking for a specific file to watch
-extension = ARGV[0].to_s + '.liquid' if ARGV[0]
-
-
-# Do watch
-puts "Watching #{extension} files in #{destination}"
-compile = true
-
-FileWatcher.new(["#{destination}/*#{extension}", "#{destination}/**/#{extension}"]).watch do |filename|
-  puts "Compile: " + compile.to_s
+class Styleguide
+  def initialize
+    @command = ARGV[0].to_s
+    @param1 = ARGV[1].to_s
+    @param2 = ARGV[2].to_s
+    
+    usage if @command.empty? or @param1.empty?
+    run_command
+  end
   
-  if compile 
-    # filename: ./_site/assets/styles/atoms/test.liquid
-    puts "Updated " + filename
-
-    # replace ./_site with absolute path
-    absolute = filename.sub "./", "#{root}/"
-    #puts "Absolute " + absolute
-
-    # replace .liquid with .scss
-    scss = absolute.sub ".liquid", ".scss"
-    
-    # remove _site
-    scss = scss.sub "_site/", ""
-    #puts "Subs " + scss
-    
-    # copy .liquid to .liquid.scss
-    system("sudo cp -f #{absolute} #{scss}");
-    
-    # tell this script do not enter in an endless loop
-    compile = false
-  else
-    compile = true
+  def run_command
+    case @command
+      when "c"
+        Compile.new
+      when "g"
+        puts "Generate"
+      when "rm"
+        puts "Remove"
+      when "mv"
+        puts "Move"
+      else
+        usage
+    end
+  end
+  
+  def usage
+    puts "Usage: sg command object1 [object2]"
+    puts "Example:"
+    puts " - sg c fonts #=> compile fonts.liquid"
+    puts " - sg g atoms/player/header #=> generates the header styleguide objects"
+    puts " - sg rm atoms/player/header #=> removes the header styleguide objects"
+    puts " - sg mv atoms/player/header molecules/player/header #=> moves the header styleguide objects"
+    abort
   end
 end
+
+sg = Styleguide.new
