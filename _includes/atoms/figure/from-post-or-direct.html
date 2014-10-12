@@ -1,0 +1,26 @@
+{% comment %}<!--
+
+Decide if the image comes from a post, with id, or simply specified inline
+
+- it is preferably via post
+- both from post and direct can be used and mixed together
+- direct attributes can overwrite post attributes
+- Ex. {% include figure.html id="1" url=site.url %}
+
+- sometimes a page displays images from other pages or posts, ie. an archive page
+- in this case instead of 'page' the 'post' Jekyll object is used and must be specified
+- Ex: {% include figure.html source=post %}
+
+-->{% endcomment %}
+
+{% if include.id %}
+  {% assign source = page %}
+  {% if include.source %}
+    {% assign source = include.source %}
+  {% endif %} 
+  
+  {% assign id = include.id | times: 1 %}
+  {% assign image = source.images[id] %}
+{% else %}
+  {% assign image = include %}
+{% endif %}

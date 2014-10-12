@@ -1,0 +1,34 @@
+@mixin directional-background-for-text($direction: right) {
+  
+  @if ($direction == right) {
+    background: repeating-linear-gradient(-55deg, $black, $black $lem/12, transparent 1px, transparent $lem);
+  }
+  
+  @if ($direction == left) {
+    background: repeating-linear-gradient(55deg, $black, $black $lem/12, transparent 1px, transparent $lem);
+  }
+  
+  @if ($direction == vertical) {
+    background: repeating-linear-gradient(90deg, $black, $black $lem/12, transparent 1px, transparent $lem);
+  }
+  
+  @if ($direction == horizontal) {
+    background: repeating-linear-gradient(0deg, $black, $black $lem/12, transparent 1px, transparent $lem);
+  }
+  
+  padding: $lem;
+  @include mobile {
+    padding: $lem;
+  }
+  
+  p {
+    @include colors;
+    border: $lem/12 solid;
+    padding: $lem / 2;
+
+    font-weight: 400;
+    font-size: smaller;
+    max-width: $text-width / 2;
+    line-height: 1.3;
+  }
+}

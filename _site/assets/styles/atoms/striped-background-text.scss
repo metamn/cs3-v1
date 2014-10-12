@@ -1,0 +1,24 @@
+@mixin striped-background-for-text($size) {
+  @include stripe(-55deg, $black, $size);
+  
+  padding: 0;
+  
+  margin: $lem * 3;
+  @include mobile {
+    margin: $lem;
+  }
+  
+  p {
+    @include colors;
+    border: $lem/12 solid;
+    padding: $lem;
+    
+    font-weight: 400;
+    
+    max-width: $text-width;
+      
+    + p {
+      margin-top: $lem;
+    }
+  }
+}

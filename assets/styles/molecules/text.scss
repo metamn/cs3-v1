@@ -1,0 +1,90 @@
+@mixin text($type) {
+  
+  // Portfolio title 
+  @if ($type == portfolio-title) {
+    h1 {
+      @include font(title);
+      max-width: $text-width / 2;
+      border-bottom: 1px solid;
+      margin-bottom: $lem / 2;
+      padding-bottom: $lem / 2;
+    }
+
+    p {
+      @include font(subtitle);
+      max-width: $text-width / 2;
+    }
+  }
+  
+  // Portfolio title for short texts 
+  // - it is used togeher with the portfolio-type mixin
+  @if ($type == portfolio-title-short) {
+    h1 {
+      margin-bottom: $lem / 4;
+      padding-bottom: $lem / 4;
+    }
+  }
+  
+  
+  // Portfolio description 
+  @if ($type == portfolio-description) {
+    @include striped-background-for-text($lem * 5);
+  }
+  
+  
+  
+  // Portfolio services 
+  @if ($type == portfolio-services) {
+    @include striped-background-for-text($lem * 5);
+    
+    p {
+      span {
+        @include font(services);
+        font-weight: 600;
+      }
+    }
+  }
+  
+  
+  // Portfolio caption 
+  @if ($type == portfolio-caption) {
+    @include directional-background-for-text;
+    
+    @include below-laptop {
+      @include directional-background-for-text(vertical);
+    }
+  }
+
+
+  
+  // About 
+  @if ($type == about) {
+    padding: $lem * 2 $lem;
+    
+    p {
+      @include font(about); 
+      max-width: $text-width;
+
+      + p {
+        margin-top: $lem;
+      }
+    }
+  }
+  
+  // The portfolio thumb caption
+  @if ($type == thumb) {
+    
+    border-top: 1px solid;
+    padding-top: $lem / 2;
+    
+    p {
+      max-width: 280px;
+      
+      @include font(subtitle);
+      
+      @include desktop-and-up {
+        padding-left: $lem;
+      }
+    }
+  }
+}

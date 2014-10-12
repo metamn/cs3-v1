@@ -1,0 +1,29 @@
+{% comment %}<!--
+
+Setting up title, class, figcaption, url
+
+- direct parameters override post parameters
+
+-->{% endcomment %}
+
+{% assign title = image.title %}
+{% assign class = image.class %}
+{% assign figcaption = image.figcaption %}
+{% assign link = image.link %}
+
+
+{% if title == null %}
+  {% assign title = include.title %}
+{% endif %}
+
+{% if class == '' %}
+  {% assign class = include.class %}
+{% endif %}
+
+{% if link == null %}
+  {% assign link = include.link %}
+{% endif %}
+
+{% if figcaption == null %}
+  {% assign figcaption = title %}
+{% endif %}

@@ -1,0 +1,7 @@
+@mixin hacks {
+  
+  // Remove the extra space at the bottom of an image inside a link
+  a img {
+    display: block;
+  }
+}

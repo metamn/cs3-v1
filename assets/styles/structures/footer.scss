@@ -1,0 +1,25 @@
+@mixin footer {
+  @include flexbox($wrap: wrap, $justify-content: center);
+  
+  article {
+    // Align to flex end and stretch 
+    @include flexbox($direction: column, $justify-content: flex-end, $align-items: baseline);
+    
+    ul, aside {
+      @include flex-item($align-self: stretch);
+    }
+    
+    
+    @include thumb;
+    width: 480px;
+    height: 320px;
+    
+    &#contact {
+      @include contact;
+    }
+    
+    &#navigation {
+      @include navigation;
+    }
+  }
+}

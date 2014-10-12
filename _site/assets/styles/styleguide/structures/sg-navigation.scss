@@ -1,0 +1,10 @@
+@mixin sg-navigation {
+  article {
+    @include show-title;
+    margin: $lem auto;
+    
+    h3 {
+      @include font(services);
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@mixin navigation {
+  ul {
+    li {
+      @include button;
+      margin-top: $lem/2;
+    }
+  }
+}

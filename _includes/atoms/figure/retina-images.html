@@ -1,0 +1,36 @@
+{% comment %}<!--
+
+Setting up 1x, 2x, ... images
+
+- the bare minimum is to have at least the mobile 1x version specified
+- Ex: mobile: image-1x.png
+
+- if the next definition is missing the previous image will be used
+- Ex: mobile: image-1x.png  #=> tablet, laptop, desktop will be image-1x.png 
+- Ex: mobile: image-1x.png,  tablet: image-2x.png  #=> laptop, desktop will be image-2x.png 
+
+- if there is no 2x definition the next image will be used
+- Ex: mobile: image1.png, tablet: image2.png   #=> mobile2x will be image2.png  
+
+- if the 'retina' is present all 2x will use that
+- Ex: mobile: image1.png, retina: image2.png  #=> mobile2x=image.png, tablet2x=image2.png
+
+-->{% endcomment %}
+
+{% assign mobile = image.mobile %}
+{% if image.tablet %}{% assign tablet = image.tablet %}{% else %}{% assign tablet = mobile %}{% endif %}
+{% if image.laptop %}{% assign laptop = image.laptop %}{% else %}{% assign laptop = tablet %}{% endif %}
+{% if image.desktop %}{% assign desktop = image.desktop %}{% else %}{% assign desktop = laptop %}{% endif %}
+
+
+{% if image.mobile2x %}{% assign mobile2x = image.mobile2x %}{% else %}{% assign mobile2x = tablet %}{% endif %}
+{% if image.tablet2x %}{% assign tablet2x = image.tablet2x %}{% else %}{% assign tablet2x = laptop %}{% endif %}
+{% if image.laptop2x %}{% assign laptop2x = image.laptop2x %}{% else %}{% assign laptop2x = desktop %}{% endif %}
+{% if image.desktop2x %}{% assign desktop2x = image.desktop2x %}{% else %}{% assign desktop2x = desktop %}{% endif %}
+
+{% if image.retina %}
+  {% assign mobile2x = image.retina %}
+  {% assign tablet2x = image.retina %}
+  {% assign laptop2x = image.retina %}
+  {% assign desktop2x = image.retina %}
+{% endif %}

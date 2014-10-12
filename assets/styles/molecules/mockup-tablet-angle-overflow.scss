@@ -1,0 +1,17 @@
+// The angle image comes in 4 sizes
+// - 1x: 768x389px
+// - 2x: 1024x519px
+// - 3x: 1440x729px
+// - 4x: 1848x936px (original)
+//
+// - on less than 768px screens the left part of the image is shown, the rest is cut and made hidden 
+@mixin mockup-tablet-angle-overflow {
+  overflow: hidden;
+  padding: 0;
+    
+  @include below-laptop {
+    figure {
+      @include figure($overflow: true);
+    }
+  }  
+}

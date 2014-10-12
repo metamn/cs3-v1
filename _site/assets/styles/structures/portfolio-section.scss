@@ -1,0 +1,34 @@
+@mixin portfolio-section {
+  @include flexbox($justify-content: center, $align-items: center, $wrap: wrap);
+  
+  article {
+    &.title, &.description, &.services {
+      padding: $lem * 3;
+      
+      @include mobile {
+        padding: $lem;
+      }
+    }
+    
+    &.title {
+      @include portfolio-title;
+    }
+    
+    &.description {
+      @include portfolio-description;
+    }
+    
+    &.services {
+      @include portfolio-services;
+    }
+    
+    &.caption {
+      @include portfolio-caption;
+    }
+
+    &.mockup {
+      padding: $lem / 2;
+      @include mockup;
+    }
+  }
+}

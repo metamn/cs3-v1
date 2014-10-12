@@ -1,0 +1,13 @@
+html.portfolio.scatter {
+  body {
+    section.portfolio-section {
+      &.screenshots-1 {
+        article {
+          &.mockup {
+            @include mockup("tablet angle center");
+          }
+        }
+      }
+    }
+  }
+}

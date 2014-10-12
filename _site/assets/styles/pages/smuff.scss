@@ -1,0 +1,37 @@
+html.portfolio.smuff {
+  body {
+    section.portfolio-section {
+      &.intro {
+        article {
+          &.title {
+            margin: auto 20%;
+            @include text(portfolio-title-short);
+          }
+          
+          &.mockup {
+            @include mockup("two desktops in a row");
+          }
+        }
+      }
+      
+      &.screenshots-1, &.screenshots-2  {
+        @include tablet {
+          @include flexbox-wrap(nowrap);
+        }
+        
+        @include laptop-and-up {
+          @include flexbox-wrap(nowrap);
+        }
+      }
+      
+      
+      &.caption {
+        article {
+          &.caption {
+            @include directional-background-for-text(vertical);
+          }
+        }
+      }
+    }
+  }
+}

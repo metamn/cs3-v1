@@ -1,0 +1,11 @@
+@mixin header {
+  padding: $lem;
+  
+  .logo {
+    @include logo;
+  }
+  
+  h1 {
+    @include font(logo);
+  }
+}

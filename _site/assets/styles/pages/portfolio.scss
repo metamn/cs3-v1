@@ -1,0 +1,14 @@
+html.portfolio {
+  body {
+    
+    section {
+      &.portfolio-section {
+        @include portfolio-section;
+      }
+    }
+    
+    #works {
+      border-top: 1px solid;
+    }
+  }
+}

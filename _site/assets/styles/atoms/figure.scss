@@ -1,0 +1,22 @@
+@mixin figure($overflow: false, $figcaption: false) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
+  @if ($overflow != false) {
+    overflow: hidden;
+    
+    img {
+      max-width: none;
+    }
+  }
+  
+  
+  @if ($figcaption == false) {
+    figcaption {
+      display: none;
+    }
+  } 
+}

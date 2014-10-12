@@ -1,0 +1,12 @@
+@mixin mockup-tablet-side-overflow {
+  overflow: hidden;
+    
+  figure {
+    @include figure($overflow: true);
+    
+    img {
+      width: 480px;
+      height: 320px;
+    }
+  }
+}

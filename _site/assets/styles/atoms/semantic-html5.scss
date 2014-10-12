@@ -1,0 +1,12 @@
+@mixin hide-title {
+  > h3 {
+    display: none;
+  }
+}
+
+
+@mixin show-title {
+  > h3 {
+    display: block;
+  }
+}

@@ -1,0 +1,12 @@
+html.frontpage {
+  body {
+    #featured-image {
+      @include featured-image;
+    }
+    
+    #about {
+      @include about;
+    }
+    
+  }
+}
