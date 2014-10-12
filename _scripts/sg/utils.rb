@@ -27,4 +27,10 @@ class Utils
     
     ret[ret.length - index - 1]
   end
+  
+  def rename_text_in_file(file, text1, text2)
+    oldf = File.read(file)
+    newf = oldf.gsub(text1, text2)
+    File.open(file, "w") {|f| f.puts newf}
+  end
 end
