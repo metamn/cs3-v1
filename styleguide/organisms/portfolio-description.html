@@ -1,27 +1,831 @@
----
-layout: styleguide
-title: Portfolio description
-subtitle: The description of a portfolio item
-category: organisms
-scss: portfolio-description.scss
----
+<!DOCTYPE html>
+<html lang="en" class="portfolio-description styleguide ">
+  <head>
+    <meta charset="utf-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="author" href="humans.txt" />
+    
+    <title>Portfolio description &mdash; It's Csongor</title> 
+    
+    <!-- Compass with SASS -->
+    
+      <link href="http://metamn.github.io/cs3-v1/assets/styles/styleguide.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    
+    
+    <!-- IE 9 -->
+    <!--[if lt IE 9]>
+    <link href="http://metamn.github.io/cs3-v1/assets/styles/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<![endif]-->
 
-{% capture description %}
+<!--[if lt IE 9]>
+  <script src="http://metamn.github.io/cs3-v1/assets/scripts/html5shiv.min.js"></script>
+<![endif]-->
+<!--[if (lt IE 9) & (!IEMobile)]>
+    <script src="http://metamn.github.io/cs3-v1/assets/scripts/css3-mediaqueries.js"></script>
+<![endif]-->
+    <!-- via Favicomatic -->
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="http://its-csongor.com/assets/images/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://its-csongor.com/assets/images/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://its-csongor.com/assets/images/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://its-csongor.com/assets/images/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="http://its-csongor.com/assets/images/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://its-csongor.com/assets/images/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://its-csongor.com/assets/images/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://its-csongor.com/assets/images/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="http://its-csongor.com/assets/images/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="http://its-csongor.com/assets/images/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="http://its-csongor.com/assets/images/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="http://its-csongor.com/assets/images/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="http://its-csongor.com/assets/images/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="Csongor Bartus"/>
+<meta name="msapplication-TileColor" content="#F1F1F1" />
+<meta name="msapplication-TileImage" content="http://its-csongor.com/assets/images/mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="http://its-csongor.com/assets/images/mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="http://its-csongor.com/assets/images/mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="http://its-csongor.com/assets/images/mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="http://its-csongor.com/assets/images/mstile-310x310.png" />
+
+    
+    <!-- Typekit -->
+    <script src="//use.typekit.net/qiy3lwz.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    
+    <!-- Picturefill Responsive Images -->
+    <script async src="http://metamn.github.io/cs3-v1/assets/scripts/picturefill.min.js"></script>
+  </head>
   
-{% endcapture %}
+  <body>
+    
+    
 
 
-{% capture example %}
+<header>
+  <div class="logo"></div>
+  <h1><a href="http://metamn.github.io/cs3-v1/" title="It's Csongor">It's Csongor</a></h1>
   
-{% endcapture %}
-
-
-
-{% capture technical %}
   
-{% endcapture %}
+    <h2>
+  <a href="http://metamn.github.io/cs3-v1/styleguide" title="Styleguide for It's Csongor">Styleguide</a>
+</h2>
+<nav>
+  <h3>Navigation</h3>
+  
+  <article>
+  <h3>
+    Atoms
+  </h3>
+  
+  <ul>
+    
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/atoms/breakpoints.html" title="Breakpoints">Breakpoints</a>
+</li>
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/atoms/colors.html" title="Colors">Colors</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/atoms/figure.html" title="Figure">Figure</a>
+</li>
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/atoms/flexbox.html" title="Flexbox">Flexbox</a>
+</li>
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/atoms/fonts.html" title="Fonts">Fonts</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/atoms/headings.html" title="Headings">Headings</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/atoms/links.html" title="Links">Links</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/atoms/responsive-typography.html" title="Responsive Typography">Responsive Typography</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/atoms/semantic-html5.html" title="Semantic HTML5">Semantic HTML5</a>
+</li>
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/atoms/square.html" title="Square">Square</a>
+</li>
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/atoms/stripe.html" title="Stripe">Stripe</a>
+</li>
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/atoms/texture.html" title="Texture">Texture</a>
+</li>
+      
+    
+      
+    
+      
+    
+  </ul>
+</article>
+  <article>
+  <h3>
+    Molecules
+  </h3>
+  
+  <ul>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/molecules/logo.html" title="Logo">Logo</a>
+</li>
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/molecules/mockup-common.html" title="Mockup common">Mockup common</a>
+</li>
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/molecules/mockup-mobile-portrait-overflow.html" title="Mockup mobile portrait overflow">Mockup mobile portrait overflow</a>
+</li>
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/molecules/mockup-tablet-angle-overflow.html" title="Mockup tablet angle overflow">Mockup tablet angle overflow</a>
+</li>
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/molecules/mockup-tablet-side-overflow.html" title="Mockup tablet side overflow">Mockup tablet side overflow</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/molecules/text.html" title="Text">Text</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+    
+  </ul>
+</article>
+  <article>
+  <h3>
+    Organisms
+  </h3>
+  
+  <ul>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/organisms/contact.html" title="Contact">Contact</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/organisms/mockup.html" title="Mockup">Mockup</a>
+</li>
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/organisms/navigation.html" title="Navigation">Navigation</a>
+</li>
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/organisms/portfolio-description.html" title="Portfolio description">Portfolio description</a>
+</li>
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/organisms/portfolio-services.html" title="Portfolio services">Portfolio services</a>
+</li>
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/organisms/portfolio-title.html" title="Portfolio title">Portfolio title</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/organisms/thumb.html" title="Thumb">Thumb</a>
+</li>
+      
+    
+      
+    
+  </ul>
+</article>
+  <article>
+  <h3>
+    Structures
+  </h3>
+  
+  <ul>
+    
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/structures/about.html" title="About">About</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/structures/featured-image.html" title="Featured image">Featured image</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/structures/footer.html" title="Footer">Footer</a>
+</li>
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/structures/header.html" title="Header">Header</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/structures/portfolio-section.html" title="Portfolio section">Portfolio section</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/structures/works.html" title="Works">Works</a>
+</li>
+      
+    
+  </ul>
+</article>
+  <article>
+  <h3>
+    Pages
+  </h3>
+  
+  <ul>
+    
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/pages/anvelocom.html" title="Anvelocom">Anvelocom</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/pages/default.html" title="Default">Default</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/pages/frontpage.html" title="Frontpage">Frontpage</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/pages/inu.html" title="Inu">Inu</a>
+</li>
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/pages/iorad.html" title="Iorad">Iorad</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/pages/occrp.html" title="OCCRP">OCCRP</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/pages/portfolio.html" title="Portfolio">Portfolio</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/pages/scatter.html" title="Scatter">Scatter</a>
+</li>
+      
+    
+      
+    
+      
+        <li>
+  <a href="http://metamn.github.io/cs3-v1/styleguide/pages/smuff.html" title="Smuff">Smuff</a>
+</li>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </ul>
+</article>
+</nav>
+  
+</header>
+<main>
+  
 
 
 
 
-{% include styleguide/structures/sg-styleguide-entry.html description=description example=example technical=technical %}
+
+
+
+
+
+
+
+<section id="portfolio-description" class="styleguide-entry">
+  <h1>Portfolio description</h1>
+  
+  <article class="subtitle">
+    <h3>Short description</h3>
+    
+    The description of a portfolio item
+  </article>
+  
+  <article class="description">
+    <h3>Description</h3>
+    
+    
+  
+
+  </article>
+  
+  
+  <article class="example">
+    <h3>Example</h3>
+    
+    
+  
+
+  </article>
+  
+  
+  <article class="technical">
+    <h3>Technical description</h3>
+    
+    
+  
+
+  </article>
+  
+  <article class="code">
+  <h3>Source code</h3>
+
+  <nav>
+    <h3>Code snippets</h3>
+
+    <ul>
+      <li><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> portfolio-description</span> <span class="p">{</span>
+  <span class="k">@include</span><span class="nd"> text</span><span class="p">(</span><span class="n">portfolio-description</span><span class="p">);</span>
+<span class="p">}</span></code></pre></div></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </nav>
+</article>
+</section>
+</main>
+
+
+<!-- jQuery from CDN -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- Site specific scripts  -->
+<script src="http://metamn.github.io/cs3-v1/assets/scripts/jquery.init.js"></script>
+
+
+</body>
+</html>

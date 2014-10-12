@@ -1,22 +1,32 @@
----
----
-{% for page in site.pages %}{% if page.title == "Colors" %}{% assign current = page %}{% endif %}{% endfor %}
-// {{ current.comments[0] }}
-{% for color in current.colors %}${{ color.name }}: {{ color.value }};
-{% endfor %}{% capture colors %}{% for color in current.colors %}{{ color.value }},{% endfor %}{% endcapture %}{% capture colors %}{% include atoms/sanitize.html text=colors separator="~" %}{% endcapture %}{% assign colors = colors | split: ',' %}
 
-// {{ current.comments[2] }}
+// All color codes
+$white: hsla(0, 0, 97.5%, 1);
+$black: hsla(0, 0%, 10%, 1);
+$red: hsla(0, 100%, 50%, 1);
+$gray: hsla(0, 0%, 40%, 1);
+$iorad-green: hsla(154, 71%, 43%, 1);
+$occrp-red: hsla(359, 65%, 36%, 1);
+$anvelocom-pink: hsla(344, 75%, 81%, 1);
+
+
+// All color pairs
 @mixin colors($scheme: black-on-white) {
-  {% for pair in current.pairs %} @if ($scheme == {% include atoms/classname.html title=pair.name %}) {
-      color: ${{ pair.foreground }};
-      background-color: ${{ pair.background }};
-  }{% endfor %}
+   @if ($scheme == black-on-white) {
+      color: $black;
+      background-color: $white;
+  } @if ($scheme == white-on-black) {
+      color: $white;
+      background-color: $black;
+  } @if ($scheme == white-on-blue) {
+      color: $white;
+      background-color: $iorad-blue;
+  }
 }
 
 
-// {{ current.comments[1] }}
-$colors: {{ colors | join: ', ' }};
+// All color codes collected in a list
+$colors: hsla(0, 0, 97.5%, 1), hsla(0, 0%, 10%, 1), hsla(0, 100%, 50%, 1), hsla(0, 0%, 40%, 1), hsla(154, 71%, 43%, 1), hsla(359, 65%, 36%, 1), hsla(344, 75%, 81%, 1);
 
-{% capture pairs %}{% for pair in current.pairs %}{% include atoms/classname.html title=pair.name %},{% endfor %}{% endcapture %}{% assign pairs = pairs | split: ',' %}
-// {{ current.comments[3] }}
-$color-pairs: {{ pairs | join: ', ' }}; 
+
+// All color pairs collected in a list
+$color-pairs: black-on-white, white-on-black, white-on-blue; 

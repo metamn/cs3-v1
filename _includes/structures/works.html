@@ -1,9 +1,0 @@
-<section id="works">
-  <h3>Works</h3>
-  
-  {% for post in site.posts %}
-    {% if post.category != "skills" %}
-      {% include organisms/thumb.html %}
-    {% endif %}
-  {% endfor %}
-</section>
