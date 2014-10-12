@@ -13,12 +13,13 @@ class Styleguide
   def run_command
     case @command
       when "c"
-        Compile.new
+        Compile.new @param1
       when "g"
         puts "Generate"
       when "rm"
         puts "Remove"
       when "mv"
+        usage if @param2.empty?
         puts "Move"
       else
         usage
