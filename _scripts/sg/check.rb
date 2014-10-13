@@ -15,20 +15,18 @@ class Check
   end
   
   def check
-    puts
-    puts "_includes vs. assets"
-    puts
+    prettyprint "assets vs styleguide"
+    puts compare(@assets, @sg, 'assets/styles', 'styleguide')
+    
+    prettyprint "styleguide vs assets"
+    puts compare(@sg, @assets, 'styleguide', 'assets/styles')
+    
+    prettyprint "_includes vs. assets"
     puts compare(@includes, @assets, '_includes', 'assets/styles')
     
-    puts
-    puts "_includes vs. styleguide"
-    puts
+    prettyprint "_includes vs. styleguide"
     puts compare(@includes, @sg, '_includes', 'styleguide')
     
-    puts
-    puts "assets vs styleguide"
-    puts
-    puts compare(@assets, @sg, 'assets/styles', 'styleguide')
   end
   
   def files(folder, ignore)
@@ -39,8 +37,26 @@ class Check
   end
   
   def compare(array1, array2, prefix1, prefix2) 
-    a1 = array1.map {|a| a.gsub(prefix1, '')}
-    a2 = array2.map {|a| a.gsub(prefix2, '')}
-    a1-a2
+    a1 = array1.map {|a| tidy(a, prefix1) }
+    a2 = array2.map {|a| tidy(a, prefix2) }
+    a1 - a2
+  end
+  
+  def tidy(object, prefix)
+    object.gsub!(prefix, '')
+    object.chomp!(".scss")
+    object.chomp!(".html")
+    
+    object
+  end
+  
+  def prettyprint(text)
+    puts 
+    puts
+    (text.length + 4).times { putc "*" }
+    puts
+    puts "/ #{text} /"
+    (text.length + 4).times { putc "*" }
+    puts
   end
 end

@@ -45,17 +45,18 @@ class Utils
   def ignore_includes
     ret = []
     ret << "_includes/jekyll/**/*"
-    ret << "_includes/styleguide/**/*"
+    ret << ["_includes/styleguide", "_includes/styleguide/**/*"]
     ret << "_includes/*.html"
-    ret << "_includes/atoms/figure/*"
+    ret << ["_includes/atoms/figure", "_includes/atoms/figure/*"]
+    ret << ["_includes/atoms/sanitize.html", "_includes/atoms/imagetitle.html", "_includes/atoms/classname.html"]
     ret
   end
   
   # what files are ignored in 'assets'
   def ignore_assets
     ret = []
-    ret << "assets/styles/atoms/flex/*"
-    ret << "assets/styles/styleguide/**/*"
+    ret << ["assets/styles/atoms/flex", "assets/styles/atoms/flex/*"]
+    ret << ["assets/styles/styleguide", "assets/styles/styleguide/**/*"]
     ret << "assets/styles/**/*.liquid"
     ret << "assets/styles/**/*.css"
     ret << "assets/styles/*.scss"
