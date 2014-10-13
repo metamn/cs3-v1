@@ -3,13 +3,9 @@ require_relative 'utils'
 class Check
   def initialize
     utils = Utils.new
-    @ignore_includes = utils.ignore_includes
-    @ignore_assets = utils.ignore_assets
-    @ignore_sg = utils.ignore_sg
-    
-    @includes = files('_includes', @ignore_includes)
-    @assets = files('assets/styles', @ignore_assets)
-    @sg = files('styleguide', @ignore_sg)
+    @includes = files('_includes', utils.ignore_includes)
+    @assets = files('assets/styles', utils.ignore_assets)
+    @sg = files('styleguide', utils.ignore_sg)
     
     check
   end
@@ -29,6 +25,7 @@ class Check
     
   end
   
+  # all files from a folder - the excluded ones
   def files(folder, ignore)
     all = Dir.glob(folder + "/**/*")
     ignore.each {|i| all = all - Dir.glob(i)}
@@ -36,12 +33,17 @@ class Check
     all
   end
   
+  # compare two sytleguide entities
+  # ex: files from 'assets' to files from 'styleguide'
   def compare(array1, array2, prefix1, prefix2) 
     a1 = array1.map {|a| tidy(a, prefix1) }
     a2 = array2.map {|a| tidy(a, prefix2) }
     a1 - a2
   end
   
+  # tidy up a filename for comparision
+  # ex: _includes/atoms/colors.html #=> atoms/colors
+  # ex: assets/styles/atoms/colors.scss #=> atoms/colors
   def tidy(object, prefix)
     object.gsub!(prefix, '')
     object.chomp!(".scss")
