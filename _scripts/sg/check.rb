@@ -17,12 +17,13 @@ class Check
     prettyprint "styleguide vs assets"
     puts compare(@sg, @assets, 'styleguide', 'assets/styles')
     
-    prettyprint "_includes vs. assets"
+    prettyprint "_includes vs assets"
     puts compare(@includes, @assets, '_includes', 'assets/styles')
     
-    prettyprint "_includes vs. styleguide"
+    prettyprint "_includes vs styleguide"
     puts compare(@includes, @sg, '_includes', 'styleguide')
     
+    puts
   end
   
   # all files from a folder - the excluded ones
@@ -59,6 +60,8 @@ class Check
     puts
     puts "/ #{text} /"
     (text.length + 4).times { putc "*" }
+    puts
+    puts "Missing from #{text.split(' vs ').last}:"
     puts
   end
 end
