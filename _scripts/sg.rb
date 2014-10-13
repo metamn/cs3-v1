@@ -2,6 +2,7 @@ require_relative 'sg/compile'
 require_relative 'sg/generate'
 require_relative 'sg/remove'
 require_relative 'sg/move'
+require_relative 'sg/check'
 
 class Styleguide
   def initialize
@@ -9,7 +10,7 @@ class Styleguide
     @param1 = ARGV[1].to_s
     @param2 = ARGV[2].to_s
     
-    usage if @command.empty? or @param1.empty?
+    usage if (@command.empty? or @param1.empty?) and (@command != "check")
     run_command
   end
   
@@ -24,18 +25,21 @@ class Styleguide
       when "mv"
         usage if @param2.empty?
         Move.new @param1, @param2
+      when "check"
+        Check.new
       else
         usage
     end
   end
   
   def usage
-    puts "Usage: sg command object1 [object2]"
+    puts "Usage: sg command [object1] [object2]"
     puts "Example:"
     puts " - sg c fonts #=> compile fonts.liquid"
     puts " - sg g atoms/player/header #=> generates the 'header' styleguide objects"
     puts " - sg rm atoms/player/header #=> removes the 'header' styleguide objects"
     puts " - sg mv atoms/player/header molecules/player/header #=> moves the header styleguide objects"
+    puts " - sg check #=> checks the consistency of the styleguide with atomic components"
     abort
   end
 end
