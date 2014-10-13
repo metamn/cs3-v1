@@ -44,25 +44,29 @@ class Utils
   # what files are ignored in '_includes'
   def ignore_includes
     ret = []
-    ret << "jekyll/*"
-    ret << "styleguide/*"
-    
+    ret << "_includes/jekyll/**/*"
+    ret << "_includes/styleguide/**/*"
+    ret << "_includes/*.html"
+    ret << "_includes/atoms/figure/*"
     ret
   end
   
   # what files are ignored in 'assets'
   def ignore_assets
     ret = []
-    ret << "atoms/flex/*"
-    ret << "styleguide/*"
-    
+    ret << "assets/styles/atoms/flex/*"
+    ret << "assets/styles/styleguide/**/*"
+    ret << "assets/styles/**/*.liquid"
+    ret << "assets/styles/**/*.css"
+    ret << "assets/styles/*.scss"
     ret
   end
   
   # what files are ignored in 'styleguide'
   def ignore_sg
     ret = []
-    
+    ret << "styleguide/index.html"
+    ret << "styleguide/**/index.html"
     ret
   end
   
