@@ -1,7 +1,0 @@
-@mixin featured-image {
-  @include flexbox($justify-content: center);
-  
-  article {
-    @include mockup("tablet angle overflow");
-  }
-}

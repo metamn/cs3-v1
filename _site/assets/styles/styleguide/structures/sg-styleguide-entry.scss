@@ -1,9 +1,0 @@
-@mixin sg-styleguide-entry {
-  .subtitle {
-    margin: $lem/2 auto $lem;
-  }
-  
-  .code {
-    @include sg-code;
-  }
-}

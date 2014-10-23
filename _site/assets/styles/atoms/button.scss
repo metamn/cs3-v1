@@ -1,9 +1,0 @@
-@mixin button {
-  cursor: pointer;
-  
-  border: 1px solid $gray;
-  padding: $lem/4 $lem/2 $lem/3;
-  @include border-radius($lem);
-  
-  text-align: center;
-}

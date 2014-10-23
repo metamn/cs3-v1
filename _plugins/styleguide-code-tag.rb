@@ -8,9 +8,12 @@ module Jekyll
 
     def render(context)
       # get which file to display, ie. full-height.scss
-      # the file type to display is passed through the @text parameter
+      # the file type to display is passed through via the @text parameter
       # ie. {% code scss %}
       filename = context.environments.first["page"]["#{@text}"]
+      
+      # we've moved to SASS partials which means "_" should be appended to filename
+      filename.prepend '_'
       
       # locate in which folder the file exists, ie 'atoms' of 'molecules'
       folder = context.environments.first["page"]["category"]
