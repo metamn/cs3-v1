@@ -26,12 +26,18 @@ class Utils
   
   
   # convert the stleguide object to support SASS partials
-  # ex "atoms/test" #=> "atoms/_test"
-  def partial(object)
+  # ex: add: "atoms/test" #=> "atoms/_test"
+  # ex: remove: "atoms/_test" #=> "atoms/test"
+  def partial(object, operation = "add")
     split = object.split('/');
     change = split.last
     
-    object.sub change, "_#{change}"
+    case operation
+      when "add"
+        object.sub change, "_#{change}"
+      when "remove"
+        object.sub change, change.sub('_', '')
+    end
   end
   
   

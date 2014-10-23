@@ -2,13 +2,15 @@ require_relative 'utils'
 
 class Check
   def initialize
-    utils = Utils.new
-    @includes = files('_includes', utils.ignore_includes)
-    @assets = files('assets/styles', utils.ignore_assets)
-    @sg = files('styleguide', utils.ignore_sg)
+    @utils = Utils.new
+    @includes = files('_includes', @utils.ignore_includes)
+    @assets = files('assets/styles', @utils.ignore_assets)
+    @sg = files('styleguide', @utils.ignore_sg)
     
     check
   end
+  
+  
   
   def check
     prettyprint "assets vs styleguide"
@@ -26,7 +28,8 @@ class Check
     puts
   end
   
-  # all files from a folder - the excluded ones
+  
+  # all files from a folder minus the excluded ones
   def files(folder, ignore)
     all = Dir.glob(folder + "/**/*")
     ignore.each {|i| all = all - Dir.glob(i)}
@@ -44,11 +47,13 @@ class Check
   
   # tidy up a filename for comparision
   # ex: _includes/atoms/colors.html #=> atoms/colors
-  # ex: assets/styles/atoms/colors.scss #=> atoms/colors
+  # ex: assets/styles/atoms/_colors.scss #=> atoms/colors
   def tidy(object, prefix)
     object.gsub!(prefix, '')
-    object.chomp!(".scss")
     object.chomp!(".html")
+    
+    object = @utils.partial(object, "remove") if object.include?('.scss') 
+    object.chomp!(".scss")
     
     object
   end
