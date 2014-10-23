@@ -6,3 +6,4 @@ images: assets/images
 
 
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', '_scripts/*']
+
