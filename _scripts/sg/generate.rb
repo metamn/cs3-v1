@@ -10,6 +10,7 @@ class Generate
     @sg = @root + "/styleguide"
     
     @utils = Utils.new
+    @object_partial = @utils.partial @object
     
     generate
   end
@@ -30,7 +31,7 @@ class Generate
   end
   
   def css
-    puts system("echo '#{@utils.mixin(@object)}' > #{@css}/#{@object}.scss")
+    puts system("echo '#{@utils.mixin(@object)}' > #{@css}/#{@object_partial}.scss")
   end
   
   def sg

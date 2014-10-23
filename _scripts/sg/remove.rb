@@ -1,3 +1,5 @@
+require_relative 'utils'
+
 
 class Remove
   def initialize(object)
@@ -7,6 +9,9 @@ class Remove
     @html = @root + "/_includes"
     @css = @root + "/assets/styles"
     @sg = @root + "/styleguide"
+    
+    @utils = Utils.new
+    @object_partial = @utils.partial @object
     
     remove
   end
@@ -18,7 +23,7 @@ class Remove
     puts " - #{@sg}"
     
     puts system("rm #{@html}/#{@object}.html")
-    puts system("rm #{@css}/#{@object}.scss")
+    puts system("rm #{@css}/#{@object_partial}.scss")
     puts system("rm #{@sg}/#{@object}.html")
   end
 end

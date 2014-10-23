@@ -11,6 +11,8 @@ class Move
     @sg = @root + "/styleguide"
     
     @utils = Utils.new
+    @object1_partial = @utils.partial @object1
+    @object2_partial = @utils.partial @object2
     
     move
   end
@@ -30,12 +32,14 @@ class Move
   end
   
   def css
-    puts system("mv #{@css}/#{@object1}.scss #{@css}/#{@object2}.scss")
+    puts system("mv #{@css}/#{@object1_partial}.scss #{@css}/#{@object2_partial}.scss")
   end
   
   def sg
     puts system("mv #{@sg}/#{@object1}.html #{@sg}/#{@object2}.html")
   end
+  
+  
   
   def rename
     @name1 = @utils.split(@object1)
@@ -48,8 +52,8 @@ class Move
   end
   
   def rename_names
-    puts "Renaming 'mixin #{@name1}' to '#{@name2}' in #{@css}/#{@object2}.scss"
-    @utils.rename_text_in_file "#{@css}/#{@object2}.scss", "#{@name1}", "#{@name2}"
+    puts "Renaming 'mixin #{@name1}' to '#{@name2}' in #{@css}/#{@object2_partial}.scss"
+    @utils.rename_text_in_file "#{@css}/#{@object2_partial}.scss", "#{@name1}", "#{@name2}"
     
     puts "Renaming 'title: #{@name1}' to '#{@name2}' in #{@sg}/#{@object2}.html"
     @utils.rename_text_in_file "#{@sg}/#{@object2}.html", "title: #{@name1.capitalize}", "title: #{@name2.capitalize}"

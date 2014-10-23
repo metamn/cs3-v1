@@ -18,11 +18,22 @@ class Utils
     ret += "layout: styleguide" + "\n"
     ret += "title: #{title.capitalize}" + "\n"
     ret += "category: #{category}" + "\n"
-    ret += "scss: #{title}.scss" + "\n"
+    ret += "scss: _#{title}.scss" + "\n"
     ret += '---' + "\n"
     
     ret
   end
+  
+  
+  # convert the stleguide object to support SASS partials
+  # ex "atoms/test" #=> "atoms/_test"
+  def partial(object)
+    split = object.split('/');
+    change = split.last
+    
+    object.sub change, "_#{change}"
+  end
+  
   
   # split a styleguide object into mixin name and atomic folder name
   # ex: split('atoms/test') #=> test
