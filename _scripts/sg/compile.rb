@@ -5,9 +5,15 @@ class Compile
     @root = Dir.pwd
     @destination = '_site/assets/styles'
     @extension = file + '.liquid'
+    @file = file
     
     do_compile
   end
+  
+  
+  # The .liquid file is compiled to .scss by Jekyll and put in _site/
+  # We take this file and put in assets/styles
+  # ex: /_site/assets/styles/atoms/test.liquid => /assets/styles/atoms/_test.scss
   
   def do_compile
     # Do watch
@@ -31,6 +37,9 @@ class Compile
         # remove _site
         scss = scss.sub "_site/", ""
         #puts "Subs " + scss
+        
+        # rename "test" to "_test" since we are using SASS partials
+        scss = scss.sub @file, "_#{@file}"
 
         # copy .liquid to .liquid.scss
         system("sudo cp -f #{absolute} #{scss}");
