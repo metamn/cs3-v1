@@ -1,0 +1,30 @@
+<nav>
+  <h3>{{ include.title }}</h3>
+
+  <ul>
+    {% for item in include.collection %}
+      <li>{{ item.extension }}</li>
+    {% endfor %}
+  </ul>
+</nav>
+
+
+{% for item in include.collection %}
+  <aside id="{{ item.extension }}">
+    <h3>{{ item.extension }}</h3>
+    
+    <div class="location">{{ item.name }}</div>
+    
+    {% case item.extension %}
+      {% when "scss" %}
+        {% highlight scss %}{% code scss %}{% endhighlight %}
+      {% when "liquid" %}
+        {% highlight liquid %}{% code liquid %}{% endhighlight %}
+      {% when "js" %}
+        {% highlight js %}{% code js %}{% endhighlight %}
+      {% when "html" %}
+        {% highlight html %}{% code html %}{% endhighlight %}
+    {% endcase %}
+  </aside>
+  
+{% endfor %}

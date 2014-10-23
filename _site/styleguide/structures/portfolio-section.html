@@ -784,11 +784,15 @@
 <section id="portfolio-section" class="styleguide-entry">
   <h1>Portfolio section</h1>
   
-  <article class="subtitle">
-    <h3>Short description</h3>
-    
-    A section of the portfolio containing images and/or text
-  </article>
+  
+  
+    <article class="subtitle">
+      <h3>Short description</h3>
+
+      A section of the portfolio containing images and/or text
+    </article>
+  
+  
   
   <article class="description">
     <h3>Description</h3>
@@ -797,6 +801,7 @@
   
 
   </article>
+  
   
   
   <article class="example">
@@ -808,6 +813,7 @@
   </article>
   
   
+  
   <article class="technical">
     <h3>Technical description</h3>
     
@@ -816,51 +822,21 @@
 
   </article>
   
+  
+  
   <article class="code">
   <h3>Source code</h3>
 
   <nav>
-    <h3>Code snippets</h3>
+  <h3>Available code snippets</h3>
 
-    <ul>
-      <li><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> portfolio-section</span> <span class="p">{</span>
-  <span class="k">@include</span><span class="nd"> flexbox</span><span class="p">(</span><span class="nv">$justify-content</span><span class="o">:</span> <span class="no">center</span><span class="o">,</span> <span class="nv">$align-items</span><span class="o">:</span> <span class="no">center</span><span class="o">,</span> <span class="nv">$wrap</span><span class="o">:</span> <span class="n">wrap</span><span class="p">);</span>
-  
-  <span class="nt">article</span> <span class="p">{</span>
-    <span class="k">&amp;</span><span class="nc">.title</span><span class="o">,</span> <span class="k">&amp;</span><span class="nc">.description</span><span class="o">,</span> <span class="k">&amp;</span><span class="nc">.services</span> <span class="p">{</span>
-      <span class="na">padding</span><span class="o">:</span> <span class="nv">$lem</span> <span class="o">*</span> <span class="mi">3</span><span class="p">;</span>
-      
-      <span class="k">@include</span><span class="nd"> mobile</span> <span class="p">{</span>
-        <span class="na">padding</span><span class="o">:</span> <span class="nv">$lem</span><span class="p">;</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
+  <ul>
     
-    <span class="k">&amp;</span><span class="nc">.title</span> <span class="p">{</span>
-      <span class="k">@include</span><span class="nd"> portfolio-title</span><span class="p">;</span>
-    <span class="p">}</span>
-    
-    <span class="k">&amp;</span><span class="nc">.description</span> <span class="p">{</span>
-      <span class="k">@include</span><span class="nd"> portfolio-description</span><span class="p">;</span>
-    <span class="p">}</span>
-    
-    <span class="k">&amp;</span><span class="nc">.services</span> <span class="p">{</span>
-      <span class="k">@include</span><span class="nd"> portfolio-services</span><span class="p">;</span>
-    <span class="p">}</span>
-    
-    <span class="k">&amp;</span><span class="nc">.caption</span> <span class="p">{</span>
-      <span class="k">@include</span><span class="nd"> portfolio-caption</span><span class="p">;</span>
-    <span class="p">}</span>
+  </ul>
+</nav>
 
-    <span class="k">&amp;</span><span class="nc">.mockup</span> <span class="p">{</span>
-      <span class="na">padding</span><span class="o">:</span> <span class="nv">$lem</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-      <span class="k">@include</span><span class="nd"> mockup</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre></div></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </nav>
+
+
 </article>
 </section>
 </main>

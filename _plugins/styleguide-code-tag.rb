@@ -3,17 +3,18 @@ module Jekyll
 
     def initialize(tag_name, text, tokens)
       super
-      @text = text.strip
+      @text = text.strip 
     end
 
     def render(context)
       # get which file to display, ie. full-height.scss
       # the file type to display is passed through via the @text parameter
       # ie. {% code scss %}
-      filename = context.environments.first["page"]["#{@text}"]
+      filenames = context.environments.first["page"]["files"].select {|hash| hash["extension"] == "#{@text}"}
+      filename = filenames.first["name"]
       
       # we've moved to SASS partials which means "_" should be appended to filename
-      filename.prepend '_'
+      filename.prepend '_' if @text == "scss"
       
       # locate in which folder the file exists, ie 'atoms' of 'molecules'
       folder = context.environments.first["page"]["category"]
@@ -28,6 +29,8 @@ module Jekyll
           file = root + "/_includes/site/" + folder + "/" + filename
         when "js"
           file = root + "/assets/scripts/" + folder + "/" + filename
+        when "liquid"
+          file = root + "/assets/styles/" + folder + "/" + filename
       end
       
       File.open(file, 'r') { |f| f.read } if File.exist? file

@@ -1,18 +1,22 @@
 ---
 layout: styleguide
 title: Breakpoints
-subtitle: The breakpoints used for responsive layouts
+subtitle: The breakpoints used for responsive layouts together with the corresponding mixins.
 category: atoms
-scss: "breakpoints.scss"
+files:
+  - name: "breakpoints.scss"
+    extension: scss
+  - name: "breakpoints.liquid"
+    extension: liquid
 items:
   - name: "$breakpoint-mobile"
-    description: Screens width less than 600px width
+    description: Screens with less than 600px width
     value: "37.5em"
   - name: "$breakpoint-laptop"
     description: Screens starting with 1024px width
     value: "64em"
   - name: "$breakpoint-desktop"
-    description: Screens width more than 1440px width
+    description: Screens with more than 1440px width
     value: "90em"
 mixins:
   - name: "mobile"
@@ -32,21 +36,6 @@ mixins:
     value: "(min-width: $breakpoint-desktop)"
 ---
 
-{% capture description %}
-{% endcapture %}
 
 
-{% capture example %}
-  
-{% endcapture %}
-
-
-
-{% capture technical %}
-  
-{% endcapture %}
-
-
-
-
-{% include styleguide/structures/sg-styleguide-entry.html description=description example=example technical=technical %}
+{% include styleguide/structures/sg-styleguide-entry.html %}

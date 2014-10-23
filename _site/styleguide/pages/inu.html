@@ -784,11 +784,15 @@
 <section id="inu" class="styleguide-entry">
   <h1>Inu</h1>
   
-  <article class="subtitle">
-    <h3>Short description</h3>
-    
-    The Inu portfolio item page
-  </article>
+  
+  
+    <article class="subtitle">
+      <h3>Short description</h3>
+
+      The Inu portfolio item page
+    </article>
+  
+  
   
   <article class="description">
     <h3>Description</h3>
@@ -797,6 +801,7 @@
   
 
   </article>
+  
   
   
   <article class="example">
@@ -808,6 +813,7 @@
   </article>
   
   
+  
   <article class="technical">
     <h3>Technical description</h3>
     
@@ -816,95 +822,21 @@
 
   </article>
   
+  
+  
   <article class="code">
   <h3>Source code</h3>
 
   <nav>
-    <h3>Code snippets</h3>
+  <h3>Available code snippets</h3>
 
-    <ul>
-      <li><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nt">html</span><span class="nc">.portfolio.inu-chivu</span> <span class="p">{</span>
-  <span class="nt">body</span> <span class="p">{</span>
-    <span class="nt">section</span><span class="nc">.portfolio-section</span> <span class="p">{</span>
-      <span class="k">&amp;</span><span class="nc">.intro</span> <span class="p">{</span>
-        <span class="nt">article</span> <span class="p">{</span>
-          <span class="k">&amp;</span><span class="nc">.title</span> <span class="p">{</span>
-            <span class="na">margin</span><span class="o">:</span> <span class="no">auto</span> <span class="mi">20</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">@include</span><span class="nd"> text</span><span class="p">(</span><span class="n">portfolio-title-short</span><span class="p">);</span>
-          <span class="p">}</span>
-          
-          <span class="k">&amp;</span><span class="nc">.mockup</span> <span class="p">{</span>
-            <span class="k">@include</span><span class="nd"> mockup</span><span class="p">(</span><span class="s2">&quot;tablet angle overflow&quot;</span><span class="p">);</span>
-          <span class="p">}</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-      
-      <span class="k">&amp;</span><span class="nc">.caption-1</span> <span class="p">{</span>
-        <span class="k">@include</span><span class="nd"> mobile</span> <span class="p">{</span>
-          <span class="na">position</span><span class="o">:</span> <span class="no">relative</span><span class="p">;</span>
-          <span class="na">overflow</span><span class="o">:</span> <span class="no">hidden</span><span class="p">;</span>
-          <span class="na">height</span><span class="o">:</span> <span class="mi">800</span><span class="kt">px</span><span class="p">;</span>
-          <span class="na">margin-bottom</span><span class="o">:</span> <span class="nv">$lem</span><span class="p">;</span>
-          
-          <span class="nt">article</span> <span class="p">{</span>
-            <span class="k">&amp;</span><span class="nc">.mockup</span> <span class="p">{</span>
-              <span class="na">position</span><span class="o">:</span> <span class="no">absolute</span><span class="p">;</span>
-              <span class="na">top</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
-              
-              <span class="nt">figure</span> <span class="p">{</span>
-                <span class="na">width</span><span class="o">:</span> <span class="mi">320</span><span class="kt">px</span><span class="p">;</span>
-              <span class="p">}</span>
-            <span class="p">}</span> 
-            
-            <span class="k">&amp;</span><span class="nd">:nth-of-type</span><span class="o">(</span><span class="nt">2</span><span class="o">)</span> <span class="p">{</span>
-              <span class="na">margin-left</span><span class="o">:</span> <span class="nv">$lem</span> <span class="o">*</span> <span class="mi">3</span><span class="p">;</span>
-            <span class="p">}</span>
-            
-            <span class="k">&amp;</span><span class="nd">:nth-of-type</span><span class="o">(</span><span class="nt">3</span><span class="o">)</span> <span class="p">{</span>
-              <span class="na">position</span><span class="o">:</span> <span class="no">relative</span><span class="p">;</span>
-              <span class="na">top</span><span class="o">:</span> <span class="mi">340</span><span class="kt">px</span><span class="p">;</span>
-            <span class="p">}</span>
-          <span class="p">}</span>
-        <span class="p">}</span>
-        
-        <span class="k">@include</span><span class="nd"> laptop-and-up</span> <span class="p">{</span>
-          <span class="na">margin-bottom</span><span class="o">:</span> <span class="nv">$lem</span> <span class="o">*</span> <span class="mi">3</span><span class="p">;</span>
-        <span class="p">}</span>
-        
-        <span class="nt">article</span> <span class="p">{</span>
-          <span class="k">&amp;</span><span class="nc">.caption</span> <span class="p">{</span>
-            <span class="na">margin</span><span class="o">:</span> <span class="no">auto</span> <span class="mi">20</span><span class="kt">%</span><span class="p">;</span>
-            <span class="k">@include</span><span class="nd"> desktop-and-up</span> <span class="p">{</span>
-              <span class="na">margin</span><span class="o">:</span> <span class="no">auto</span> <span class="mi">40</span><span class="kt">%</span><span class="p">;</span>
-            <span class="p">}</span>
-            
-            <span class="k">@include</span><span class="nd"> directional-background-for-text</span><span class="p">(</span><span class="n">horizontal</span><span class="p">);</span>
-            
-            <span class="k">@include</span><span class="nd"> below-laptop</span> <span class="p">{</span>
-              <span class="k">@include</span><span class="nd"> directional-background-for-text</span><span class="p">(</span><span class="n">vertical</span><span class="p">);</span>
-            <span class="p">}</span>
-          <span class="p">}</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-      
-      <span class="k">&amp;</span><span class="nc">.screenshots-1</span> <span class="p">{</span>
-        <span class="k">@include</span><span class="nd"> laptop-and-up</span> <span class="p">{</span>
-          <span class="k">@include</span><span class="nd"> flexbox-wrap</span><span class="p">(</span><span class="no">nowrap</span><span class="p">);</span>
-        <span class="p">}</span> 
-      <span class="p">}</span>
-      
-      <span class="k">&amp;</span><span class="nc">.screenshots-2</span> <span class="p">{</span>
-        <span class="k">@include</span><span class="nd"> laptop-and-up</span> <span class="p">{</span>
-          <span class="k">@include</span><span class="nd"> flexbox</span><span class="p">(</span><span class="nv">$wrap</span><span class="o">:</span> <span class="no">nowrap</span><span class="o">,</span> <span class="nv">$align-items</span><span class="o">:</span> <span class="n">flex-end</span><span class="p">);</span>
-        <span class="p">}</span> 
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre></div></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </nav>
+  <ul>
+    
+  </ul>
+</nav>
+
+
+
 </article>
 </section>
 </main>

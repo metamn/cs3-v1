@@ -1,9 +1,21 @@
 @mixin sg-styleguide-entry {
-  .subtitle {
-    margin: $lem/2 auto $lem;
-  }
-  
-  .code {
-    @include sg-code;
+  article {
+    @include show-title;
+    
+    h3 {
+      @include font(services);
+    }
+    
+    &.subtitle {
+      @include sg-subtitle;
+    }
+    
+    &.description {
+      @include sg-description;
+    }
+
+    &.code {
+      @include sg-code;
+    }
   }
 }

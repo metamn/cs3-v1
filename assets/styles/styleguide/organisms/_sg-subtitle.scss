@@ -1,0 +1,5 @@
+@mixin sg-subtitle {
+  @include hide-title;
+  
+  margin: $lem/2 auto $lem;
+}

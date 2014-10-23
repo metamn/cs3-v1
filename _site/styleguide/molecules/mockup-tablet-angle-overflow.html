@@ -784,11 +784,15 @@
 <section id="mockup-tablet-angle-overflow" class="styleguide-entry">
   <h1>Mockup tablet angle overflow</h1>
   
-  <article class="subtitle">
-    <h3>Short description</h3>
-    
-    Mockup for a tablet in angle which overflows the screen
-  </article>
+  
+  
+    <article class="subtitle">
+      <h3>Short description</h3>
+
+      Mockup for a tablet in angle which overflows the screen
+    </article>
+  
+  
   
   <article class="description">
     <h3>Description</h3>
@@ -797,6 +801,7 @@
   
 
   </article>
+  
   
   
   <article class="example">
@@ -808,6 +813,7 @@
   </article>
   
   
+  
   <article class="technical">
     <h3>Technical description</h3>
     
@@ -816,34 +822,21 @@
 
   </article>
   
+  
+  
   <article class="code">
   <h3>Source code</h3>
 
   <nav>
-    <h3>Code snippets</h3>
+  <h3>Available code snippets</h3>
 
-    <ul>
-      <li><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="c1">// The angle image comes in 4 sizes</span>
-<span class="c1">// - 1x: 768x389px</span>
-<span class="c1">// - 2x: 1024x519px</span>
-<span class="c1">// - 3x: 1440x729px</span>
-<span class="c1">// - 4x: 1848x936px (original)</span>
-<span class="c1">//</span>
-<span class="c1">// - on less than 768px screens the left part of the image is shown, the rest is cut and made hidden </span>
-<span class="k">@mixin</span><span class="nf"> mockup-tablet-angle-overflow</span> <span class="p">{</span>
-  <span class="na">overflow</span><span class="o">:</span> <span class="no">hidden</span><span class="p">;</span>
-  <span class="na">padding</span><span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+  <ul>
     
-  <span class="k">@include</span><span class="nd"> below-laptop</span> <span class="p">{</span>
-    <span class="nt">figure</span> <span class="p">{</span>
-      <span class="k">@include</span><span class="nd"> figure</span><span class="p">(</span><span class="nv">$overflow</span><span class="o">:</span> <span class="n-Pseudo">true</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>  
-<span class="p">}</span></code></pre></div></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </nav>
+  </ul>
+</nav>
+
+
+
 </article>
 </section>
 </main>

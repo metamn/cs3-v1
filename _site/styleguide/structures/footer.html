@@ -784,11 +784,15 @@
 <section id="footer" class="styleguide-entry">
   <h1>Footer</h1>
   
-  <article class="subtitle">
-    <h3>Short description</h3>
-    
-    Contact and links to other pages
-  </article>
+  
+  
+    <article class="subtitle">
+      <h3>Short description</h3>
+
+      Contact and links to other pages
+    </article>
+  
+  
   
   <article class="description">
     <h3>Description</h3>
@@ -797,6 +801,7 @@
   
 
   </article>
+  
   
   
   <article class="example">
@@ -808,6 +813,7 @@
   </article>
   
   
+  
   <article class="technical">
     <h3>Technical description</h3>
     
@@ -816,42 +822,21 @@
 
   </article>
   
+  
+  
   <article class="code">
   <h3>Source code</h3>
 
   <nav>
-    <h3>Code snippets</h3>
+  <h3>Available code snippets</h3>
 
-    <ul>
-      <li><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> footer</span> <span class="p">{</span>
-  <span class="k">@include</span><span class="nd"> flexbox</span><span class="p">(</span><span class="nv">$wrap</span><span class="o">:</span> <span class="n">wrap</span><span class="o">,</span> <span class="nv">$justify-content</span><span class="o">:</span> <span class="no">center</span><span class="p">);</span>
-  
-  <span class="nt">article</span> <span class="p">{</span>
-    <span class="c1">// Align to flex end and stretch </span>
-    <span class="k">@include</span><span class="nd"> flexbox</span><span class="p">(</span><span class="nv">$direction</span><span class="o">:</span> <span class="n">column</span><span class="o">,</span> <span class="nv">$justify-content</span><span class="o">:</span> <span class="n">flex-end</span><span class="o">,</span> <span class="nv">$align-items</span><span class="o">:</span> <span class="no">baseline</span><span class="p">);</span>
+  <ul>
     
-    <span class="nt">ul</span><span class="o">,</span> <span class="nt">aside</span> <span class="p">{</span>
-      <span class="k">@include</span><span class="nd"> flex-item</span><span class="p">(</span><span class="nv">$align-self</span><span class="o">:</span> <span class="n">stretch</span><span class="p">);</span>
-    <span class="p">}</span>
-    
-    
-    <span class="k">@include</span><span class="nd"> thumb</span><span class="p">;</span>
-    <span class="na">width</span><span class="o">:</span> <span class="mi">480</span><span class="kt">px</span><span class="p">;</span>
-    <span class="na">height</span><span class="o">:</span> <span class="mi">320</span><span class="kt">px</span><span class="p">;</span>
-    
-    <span class="k">&amp;</span><span class="nn">#contact</span> <span class="p">{</span>
-      <span class="k">@include</span><span class="nd"> contact</span><span class="p">;</span>
-    <span class="p">}</span>
-    
-    <span class="k">&amp;</span><span class="nn">#navigation</span> <span class="p">{</span>
-      <span class="k">@include</span><span class="nd"> navigation</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre></div></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </nav>
+  </ul>
+</nav>
+
+
+
 </article>
 </section>
 </main>

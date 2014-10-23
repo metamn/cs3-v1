@@ -769,62 +769,51 @@
   
 </header>
 <main>
-  
-
-
-
-
-
-
-
-
-
-
-
-<section id="breakpoints" class="styleguide-entry">
+  <section id="breakpoints" class="styleguide-entry">
   <h1>Breakpoints</h1>
   
-  <article class="subtitle">
-    <h3>Short description</h3>
-    
-    The breakpoints used for responsive layouts
-  </article>
   
-  <article class="description">
-    <h3>Description</h3>
-    
-    
+  
+    <article class="subtitle">
+      <h3>Short description</h3>
 
-  </article>
+      The breakpoints used for responsive layouts together with the corresponding mixins.
+    </article>
   
   
-  <article class="example">
-    <h3>Example</h3>
-    
-    
-  
-
-  </article>
   
   
-  <article class="technical">
-    <h3>Technical description</h3>
-    
-    
   
-
-  </article>
+  
+  
+  
   
   <article class="code">
   <h3>Source code</h3>
 
   <nav>
-    <h3>Code snippets</h3>
+  <h3>Available code snippets</h3>
 
-    <ul>
-      <li><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$breakpoint-mobile</span><span class="o">:</span> <span class="mi">37</span><span class="mf">.5</span><span class="kt">em</span><span class="p">;</span> <span class="c1">// Screens width less than 600px width</span>
+  <ul>
+    
+      <li>scss</li>
+    
+      <li>liquid</li>
+    
+  </ul>
+</nav>
+
+
+
+  <aside id="scss">
+    <h3>scss</h3>
+    
+    <div class="location">_breakpoints.scss</div>
+    
+    
+        <div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$breakpoint-mobile</span><span class="o">:</span> <span class="mi">37</span><span class="mf">.5</span><span class="kt">em</span><span class="p">;</span> <span class="c1">// Screens with less than 600px width</span>
 <span class="nv">$breakpoint-laptop</span><span class="o">:</span> <span class="mi">64</span><span class="kt">em</span><span class="p">;</span> <span class="c1">// Screens starting with 1024px width</span>
-<span class="nv">$breakpoint-desktop</span><span class="o">:</span> <span class="mi">90</span><span class="kt">em</span><span class="p">;</span> <span class="c1">// Screens width more than 1440px width</span>
+<span class="nv">$breakpoint-desktop</span><span class="o">:</span> <span class="mi">90</span><span class="kt">em</span><span class="p">;</span> <span class="c1">// Screens with more than 1440px width</span>
 
 
 
@@ -861,11 +850,34 @@
   <span class="k">@media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="nd">:</span> <span class="err">$</span><span class="nt">breakpoint-desktop</span><span class="o">)</span> <span class="p">{</span>
     <span class="k">@content</span>
   <span class="p">}</span>
-<span class="p">}</span></code></pre></div></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </nav>
+<span class="p">}</span></code></pre></div>
+      
+  </aside>
+  
+
+  <aside id="liquid">
+    <h3>liquid</h3>
+    
+    <div class="location">breakpoints.liquid</div>
+    
+    
+        <div class="highlight"><pre><code class="language-liquid" data-lang="liquid">---
+---
+<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>page<span class="w"> </span>in<span class="w"> </span>site.pages<span class="w"> </span><span class="p">%}{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;Breakpoints&quot;</span><span class="w"> </span><span class="p">%}</span><span class="err">{%</span><span class="w"> </span><span class="nv">for</span><span class="w"> </span><span class="nv">item</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">items</span><span class="w"> </span><span class="p">%}{{</span><span class="w"> </span><span class="nv">item</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="p">}}</span>: <span class="p">{{</span><span class="w"> </span><span class="nv">item</span><span class="p">.</span><span class="nv">value</span><span class="w"> </span><span class="p">}}</span>; // <span class="p">{{</span><span class="w"> </span><span class="nv">item</span><span class="p">.</span><span class="nv">description</span><span class="w"> </span><span class="p">}}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+
+<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>page<span class="w"> </span>in<span class="w"> </span>site.pages<span class="w"> </span><span class="p">%}{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;Breakpoints&quot;</span><span class="w"> </span><span class="p">%}</span><span class="err">{%</span><span class="w"> </span><span class="nv">for</span><span class="w"> </span><span class="nv">item</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">mixins</span><span class="w"> </span><span class="p">%}</span>
+@mixin <span class="p">{{</span><span class="w"> </span><span class="nv">item</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="p">}}</span> {
+  // <span class="p">{{</span><span class="w"> </span><span class="nv">item</span><span class="p">.</span><span class="nv">description</span><span class="w"> </span><span class="p">}}</span> 
+  @media only screen and <span class="p">{{</span><span class="w"> </span><span class="nv">item</span><span class="p">.</span><span class="nv">value</span><span class="w"> </span><span class="p">}}</span> {
+    @content
+  }
+}
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span></code></pre></div>
+      
+  </aside>
+  
+
 </article>
 </section>
 

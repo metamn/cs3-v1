@@ -784,11 +784,15 @@
 <section id="mockup" class="styleguide-entry">
   <h1>Mockup</h1>
   
-  <article class="subtitle">
-    <h3>Short description</h3>
-    
-    Different screenshots wrapped into different devices
-  </article>
+  
+  
+    <article class="subtitle">
+      <h3>Short description</h3>
+
+      Different screenshots wrapped into different devices
+    </article>
+  
+  
   
   <article class="description">
     <h3>Description</h3>
@@ -797,6 +801,7 @@
   
 
   </article>
+  
   
   
   <article class="example">
@@ -808,6 +813,7 @@
   </article>
   
   
+  
   <article class="technical">
     <h3>Technical description</h3>
     
@@ -816,72 +822,21 @@
 
   </article>
   
+  
+  
   <article class="code">
   <h3>Source code</h3>
 
   <nav>
-    <h3>Code snippets</h3>
+  <h3>Available code snippets</h3>
 
-    <ul>
-      <li><div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@mixin</span><span class="nf"> mockup</span><span class="p">(</span><span class="nv">$type</span><span class="o">:</span> <span class="n">common</span><span class="p">)</span> <span class="p">{</span>
-  
-  
-  
-  <span class="k">@if</span> <span class="p">(</span><span class="nv">$type</span> <span class="o">==</span> <span class="s2">&quot;two mobiles in a row&quot;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">@include</span><span class="nd"> tablet</span> <span class="p">{</span>
-      <span class="nt">img</span> <span class="p">{</span>
-        <span class="na">max-width</span><span class="o">:</span> <span class="mi">260</span><span class="kt">px</span><span class="p">;</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-  
-  <span class="k">@if</span> <span class="p">(</span><span class="nv">$type</span> <span class="o">==</span> <span class="s2">&quot;tablet angle center&quot;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">@include</span><span class="nd"> below-laptop</span> <span class="p">{</span>
-      <span class="na">position</span><span class="o">:</span> <span class="no">relative</span><span class="p">;</span>
-      <span class="k">@include</span><span class="nd"> mockup-tablet-angle-overflow</span><span class="p">;</span>
-      
-      <span class="nt">figure</span> <span class="p">{</span>
-        <span class="na">position</span><span class="o">:</span> <span class="no">relative</span><span class="p">;</span>
-        <span class="na">overflow</span><span class="o">:</span> <span class="no">visible</span><span class="p">;</span>
-        <span class="na">left</span><span class="o">:</span> <span class="mi">-100</span><span class="kt">px</span><span class="p">;</span>
-        
-        <span class="k">@include</span><span class="nd"> mobile</span> <span class="p">{</span>
-          <span class="na">left</span><span class="o">:</span> <span class="mi">-200</span><span class="kt">px</span><span class="p">;</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-  
-  <span class="k">@if</span> <span class="p">(</span><span class="nv">$type</span> <span class="o">==</span> <span class="s2">&quot;two desktops in a row&quot;</span><span class="p">)</span> <span class="p">{</span>
+  <ul>
     
-    <span class="k">@include</span><span class="nd"> desktop-and-up</span> <span class="p">{</span>
-      <span class="nt">img</span> <span class="p">{</span>
-        <span class="na">max-width</span><span class="o">:</span> <span class="mi">500</span><span class="kt">px</span><span class="p">;</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-  
-  
-  <span class="k">@if</span> <span class="p">(</span><span class="nv">$type</span> <span class="o">==</span> <span class="n">common</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">@include</span><span class="nd"> mockup-common</span><span class="p">;</span>
-  <span class="p">}</span>
-  
-  <span class="k">@if</span> <span class="p">(</span><span class="nv">$type</span> <span class="o">==</span> <span class="s2">&quot;tablet side overflow&quot;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">@include</span><span class="nd"> mockup-tablet-side-overflow</span><span class="p">;</span>
-  <span class="p">}</span>
-  
-  <span class="k">@if</span> <span class="p">(</span><span class="nv">$type</span> <span class="o">==</span> <span class="s2">&quot;mobile portrait overflow&quot;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">@include</span><span class="nd"> mockup-mobile-portrait-overflow</span><span class="p">;</span>
-  <span class="p">}</span>
-  
-  <span class="k">@if</span> <span class="p">(</span><span class="nv">$type</span> <span class="o">==</span> <span class="s2">&quot;tablet angle overflow&quot;</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">@include</span><span class="nd"> mockup-tablet-angle-overflow</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre></div></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </nav>
+  </ul>
+</nav>
+
+
+
 </article>
 </section>
 </main>
