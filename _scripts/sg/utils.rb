@@ -89,4 +89,13 @@ class Utils
   end
   
   
+  def stars(text)
+    puts 
+    puts
+    (text.length + 4).times { putc "*" }
+    puts
+    puts "/ #{text} /"
+    (text.length + 4).times { putc "*" }
+    puts
+  end
 end

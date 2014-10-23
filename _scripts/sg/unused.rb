@@ -1,9 +1,11 @@
 require_relative 'find'
+require_relative 'utils'
 
 class Unused
   def initialize
     @root = Dir.pwd
     @dirs = @root + '/assets/styles'
+    @utils = Utils.new
     
     unused
   end
@@ -15,7 +17,7 @@ class Unused
     #puts mixins
     mixins.each do |mixin|
       find = Find.new mixin
-      puts "#{mixin} not found" unless find.found
+      @utils.stars "#{mixin} not found" unless find.found
     end
   end
   
@@ -36,7 +38,10 @@ class Unused
     split1 = mixin.split "@mixin "
     split1 = split1.last
     
+    # @mixin button {
     split2 = split1.split " " if split1.include? " "
+    
+    # @mixin button($param ....
     split2 = split1.split "(" if split1.include? "("
     
     split2.first

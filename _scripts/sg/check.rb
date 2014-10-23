@@ -59,13 +59,7 @@ class Check
   end
   
   def prettyprint(text)
-    puts 
-    puts
-    (text.length + 4).times { putc "*" }
-    puts
-    puts "/ #{text} /"
-    (text.length + 4).times { putc "*" }
-    puts
+    @utils.stars text
     puts "Missing from #{text.split(' vs ').last}:"
     puts
   end
