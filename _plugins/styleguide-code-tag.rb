@@ -10,7 +10,7 @@ module Jekyll
       # get which file to display, ie. full-height.scss
       # the file type to display is passed through via the @text parameter
       # ie. {% code scss %}
-      filenames = context.environments.first["page"]["files"].select {|hash| hash["extension"] == "#{@text}"}
+      filenames = context.environments.first["page"]["files"].select {|hash| hash["name"].include? "#{@text}"}
       filename = filenames.first["name"]
       
       # we've moved to SASS partials which means "_" should be appended to filename
@@ -26,7 +26,7 @@ module Jekyll
         when "scss"
           file = root + "/assets/styles/" + folder + "/" + filename
         when "html"
-          file = root + "/_includes/site/" + folder + "/" + filename
+          file = root + "/_includes/" + folder + "/" + filename
         when "js"
           file = root + "/assets/scripts/" + folder + "/" + filename
         when "liquid"

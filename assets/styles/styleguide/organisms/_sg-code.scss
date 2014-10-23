@@ -1,5 +1,5 @@
 @mixin sg-code {
-  nav ul li {
+  aside {
     @include sg-highlight;
   }
 } 

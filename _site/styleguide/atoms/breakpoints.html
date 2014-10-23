@@ -796,21 +796,29 @@
 
   <ul>
     
+      
       <li>scss</li>
     
+      
       <li>liquid</li>
+    
+      
+      <li>html</li>
+    
+      
+      <li>js</li>
     
   </ul>
 </nav>
 
 
 
+  
   <aside id="scss">
     <h3>scss</h3>
     
-    <div class="location">_breakpoints.scss</div>
     
-    
+        <div class="location">assets/styles/atoms/_breakpoints.scss</div>
         <div class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$breakpoint-mobile</span><span class="o">:</span> <span class="mi">37</span><span class="mf">.5</span><span class="kt">em</span><span class="p">;</span> <span class="c1">// Screens with less than 600px width</span>
 <span class="nv">$breakpoint-laptop</span><span class="o">:</span> <span class="mi">64</span><span class="kt">em</span><span class="p">;</span> <span class="c1">// Screens starting with 1024px width</span>
 <span class="nv">$breakpoint-desktop</span><span class="o">:</span> <span class="mi">90</span><span class="kt">em</span><span class="p">;</span> <span class="c1">// Screens with more than 1440px width</span>
@@ -855,12 +863,12 @@
   </aside>
   
 
+  
   <aside id="liquid">
     <h3>liquid</h3>
     
-    <div class="location">breakpoints.liquid</div>
     
-    
+        <div class="location">assets/styles/atoms/breakpoints.liquid</div>
         <div class="highlight"><pre><code class="language-liquid" data-lang="liquid">---
 ---
 <span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>page<span class="w"> </span>in<span class="w"> </span>site.pages<span class="w"> </span><span class="p">%}{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;Breakpoints&quot;</span><span class="w"> </span><span class="p">%}</span><span class="err">{%</span><span class="w"> </span><span class="nv">for</span><span class="w"> </span><span class="nv">item</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">items</span><span class="w"> </span><span class="p">%}{{</span><span class="w"> </span><span class="nv">item</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="p">}}</span>: <span class="p">{{</span><span class="w"> </span><span class="nv">item</span><span class="p">.</span><span class="nv">value</span><span class="w"> </span><span class="p">}}</span>; // <span class="p">{{</span><span class="w"> </span><span class="nv">item</span><span class="p">.</span><span class="nv">description</span><span class="w"> </span><span class="p">}}</span>
@@ -874,6 +882,47 @@
   }
 }
 <span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span></code></pre></div>
+      
+  </aside>
+  
+
+  
+  <aside id="html">
+    <h3>html</h3>
+    
+    
+        <div class="location">_includes/atoms/figure.html</div>
+        <div class="highlight"><pre><code class="language-html" data-lang="html">{% include atoms/figure/from-post-or-direct.html %}
+{% include atoms/figure/retina-images.html %}
+{% include atoms/figure/image-parameters.html %}
+
+
+<span class="nt">&lt;figure</span> <span class="na">id=</span><span class="s">&quot;{% include atoms/classname.html title=title %}&quot;</span> <span class="na">class=</span><span class="s">&quot;{{ class }}&quot;</span><span class="nt">&gt;</span>
+  {% if link %}<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ site.url }}{{ link }}&quot;</span> <span class="na">title=</span><span class="s">&quot;{{ title }}&quot;</span><span class="nt">&gt;</span>{% endif %}
+    <span class="nt">&lt;picture&gt;</span>
+      <span class="c">&lt;!--[if IE 9]&gt;&lt;video style=&quot;display: none;&quot;&gt;&lt;![endif]--&gt;</span>
+      <span class="nt">&lt;source</span> <span class="na">media=</span><span class="s">&quot;(min-width: 90em)&quot;</span> <span class="na">srcset=</span><span class="s">&quot;{{ site.url }}/{{ site.images }}/{{ desktop }}, {{ site.url }}/{{ site.images }}/{{ desktop2x }} 2x&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;source</span> <span class="na">media=</span><span class="s">&quot;(min-width: 64em)&quot;</span> <span class="na">srcset=</span><span class="s">&quot;{{ site.url }}/{{ site.images }}/{{ laptop }}, {{ site.url }}/{{ site.images }}/{{ laptop2x }} 2x&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;source</span> <span class="na">media=</span><span class="s">&quot;(min-width: 37.5em)&quot;</span> <span class="na">srcset=</span><span class="s">&quot;{{ site.url }}/{{ site.images }}/{{ tablet }}, {{ site.url }}/{{ site.images }}/{{ tablet2x }} 2x&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;source</span> <span class="na">srcset=</span><span class="s">&quot;{{ site.url }}/{{ site.images }}/{{ mobile }}, {{ site.url }}/{{ site.images }}/{{ mobile2x }} 2x&quot;</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!--[if IE 9]&gt;&lt;/video&gt;&lt;![endif]--&gt;</span>
+
+      <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;{{ site.url }}/{{ site.images }}/{{ mobile }}&quot;</span> <span class="na">alt=</span><span class="s">&quot;{{ title }}&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/picture&gt;</span>
+    <span class="nt">&lt;figcaption&gt;</span>{{ figcaption }}<span class="nt">&lt;/figcaption&gt;</span>
+  {% if link %}<span class="nt">&lt;/a&gt;</span>{% endif %}
+<span class="nt">&lt;/figure&gt;</span></code></pre></div>
+    
+  </aside>
+  
+
+  
+  <aside id="js">
+    <h3>js</h3>
+    
+    
+        <div class="location">assets/scripts/atoms/test.js</div>
+        <div class="highlight"><pre><code class="language-js" data-lang="js"><span class="c1">// Test.js</span></code></pre></div>
       
   </aside>
   
