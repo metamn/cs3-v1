@@ -1,5 +1,4 @@
 @mixin sg-breakpoints {
-  
   aside {
     @include show-title;
     @include block;
@@ -11,6 +10,16 @@
       &.line {
         border-bottom: 1px solid;
         float: left;
+      }
+    }
+    
+    &#breakpoints-x-axis {
+      span {
+        &.line {
+          display: inline-block;
+          border-bottom: 1px solid;
+          margin-right: -1%;
+        }
       }
     }
   }

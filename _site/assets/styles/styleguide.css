@@ -190,6 +190,12 @@ html.styleguide body main .styleguide-entry article.example.breakpoints aside { 
 html.styleguide body main .styleguide-entry article.example.breakpoints aside > h3 { display: block; }
 html.styleguide body main .styleguide-entry article.example.breakpoints aside div { width: 100%; float: left; }
 html.styleguide body main .styleguide-entry article.example.breakpoints aside div.line { border-bottom: 1px solid; float: left; }
+html.styleguide body main .styleguide-entry article.example.breakpoints aside#breakpoints-x-axis span.line { display: inline-block; border-bottom: 1px solid; margin-right: -1%; }
+html.styleguide body main .styleguide-entry article.technical.breakpoints aside { width: 100%; float: left; margin-bottom: 1.56em; }
+html.styleguide body main .styleguide-entry article.technical.breakpoints aside > h3 { display: block; }
+html.styleguide body main .styleguide-entry article.technical.breakpoints aside div { width: 100%; float: left; }
+html.styleguide body main .styleguide-entry article.technical.breakpoints aside div.line { border-bottom: 1px solid; float: left; }
+html.styleguide body main .styleguide-entry article.technical.breakpoints aside#breakpoints-x-axis span.line { display: inline-block; border-bottom: 1px solid; margin-right: -1%; }
 html.styleguide body main .styleguide-entry article.description > h3 { display: none; }
 html.styleguide body main .styleguide-entry article.code aside .highlight table td { padding: 5px; }
 html.styleguide body main .styleguide-entry article.code aside .highlight table pre { margin: 0; }

@@ -19,18 +19,28 @@ mixins:
   - name: "mobile"
     description: Mobile devices in both portrait and landscape mode
     value: "(max-width: $breakpoint-mobile - 0.001)"
+    start: 0
+    end: 37.5
   - name: "tablet"
     description: Tablets in both portrait and landscape mode
     value: "(min-width: $breakpoint-mobile) and (max-width: $breakpoint-laptop - 0.001)"
+    start: 37.5
+    end: 64
   - name: "below-laptop"
     description: Mobile and tablet devices in both portrait and landscape mode
     value: "(max-width: $breakpoint-laptop - 0.001)"
+    start: 0
+    end: 64
   - name: "laptop-and-up"
     description: Everything above 1024px
     value: "(min-width: $breakpoint-laptop)"
+    start: 64
+    end: 100
   - name: "desktop-and-up"
     description: For large screens above 1440px
     value: "(min-width: $breakpoint-desktop)"
+    start: 90
+    end: 100
 ---
 
 {% capture example %}
@@ -38,4 +48,12 @@ mixins:
 {% endcapture %}
 
 
-{% include styleguide/structures/sg-styleguide-entry.html example=example %}
+{% capture technical %}
+  <p>
+    Around these breakpoints a set of responsive mixins are defined to cover all possible device sizes and make the design fully responsive.
+  </p>
+  {% include styleguide/atoms/sg-breakpoint-mixins.html %}
+{% endcapture %}
+
+
+{% include styleguide/structures/sg-styleguide-entry.html example=example technical=technical %}

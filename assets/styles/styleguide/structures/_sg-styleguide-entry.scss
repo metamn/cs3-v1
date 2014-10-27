@@ -14,6 +14,10 @@
       @include sg-example;
     }
     
+    &.technical {
+      @include sg-technical;
+    }
+    
     &.description {
       @include sg-description;
     }
