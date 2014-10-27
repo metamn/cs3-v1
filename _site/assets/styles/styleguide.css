@@ -185,6 +185,11 @@ html.styleguide body main .styleguide-entry article > h3 { display: block; }
 html.styleguide body main .styleguide-entry article h3 { font-family: "Europa", sans-serif; font-weight: 400; }
 html.styleguide body main .styleguide-entry article.subtitle { margin: 0.78em auto 1.56em; }
 html.styleguide body main .styleguide-entry article.subtitle > h3 { display: none; }
+html.styleguide body main .styleguide-entry article.example > h3 { display: none; }
+html.styleguide body main .styleguide-entry article.example.breakpoints aside { width: 100%; float: left; margin-bottom: 1.56em; }
+html.styleguide body main .styleguide-entry article.example.breakpoints aside > h3 { display: block; }
+html.styleguide body main .styleguide-entry article.example.breakpoints aside div { width: 100%; float: left; }
+html.styleguide body main .styleguide-entry article.example.breakpoints aside div.line { border-bottom: 1px solid; float: left; }
 html.styleguide body main .styleguide-entry article.description > h3 { display: none; }
 html.styleguide body main .styleguide-entry article.code aside .highlight table td { padding: 5px; }
 html.styleguide body main .styleguide-entry article.code aside .highlight table pre { margin: 0; }

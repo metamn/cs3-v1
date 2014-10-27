@@ -1,0 +1,17 @@
+@mixin sg-breakpoints {
+  
+  aside {
+    @include show-title;
+    @include block;
+    margin-bottom: $lem;
+    
+    div {
+      @include block;
+      
+      &.line {
+        border-bottom: 1px solid;
+        float: left;
+      }
+    }
+  }
+}

@@ -19,7 +19,7 @@
   {% endif %}
   
   {% if include.example %}
-  <article class="example">
+  <article class="example {% include atoms/classname.html title=page.title %}">
     <h3>Example</h3>
     
     {{ include.example }}

@@ -10,6 +10,10 @@
       @include sg-subtitle;
     }
     
+    &.example {
+      @include sg-example;
+    }
+    
     &.description {
       @include sg-description;
     }

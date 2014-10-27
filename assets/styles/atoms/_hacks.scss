@@ -5,3 +5,10 @@
     display: block;
   }
 }
+
+
+// Float left a block element
+@mixin block {
+  width: 100%;
+  float: left;
+}

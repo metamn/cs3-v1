@@ -1,0 +1,7 @@
+@mixin sg-example {
+  @include hide-title;
+  
+  &.breakpoints {
+    @include sg-breakpoints;
+  }
+}
