@@ -9,7 +9,9 @@
     <h3>{{ shortname }}</h3>
 
     <div class="line" style="width: {{ em }}%"></div>
-    <div class="size">{{ breakpoint.value }}</div>
-    <div class="description">{{ breakpoint.description }}</div>
+    <div class="info">
+      <span class="size">{{ breakpoint.value }}</span>
+      <span class="description">{{ breakpoint.description }}</span>
+    </div>
   </aside>
 {% endfor %}

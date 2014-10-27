@@ -4,6 +4,7 @@
     @include block;
     margin-bottom: $lem;
     
+    
     div {
       @include block;
       
@@ -13,7 +14,14 @@
       }
     }
     
+    span {
+      @include block;
+      font-size: small;
+    }
+    
     &#breakpoints-x-axis {
+      @include hide-title;
+      
       span {
         &.line {
           display: inline-block;

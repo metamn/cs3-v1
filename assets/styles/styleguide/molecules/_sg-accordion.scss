@@ -1,0 +1,16 @@
+@mixin sg-accordion {
+  > * {
+    display: none;
+  }
+  
+  h3 {
+    display: block;
+    cursor: pointer;
+  }
+  
+  &.active {
+    > * {
+      display: block;
+    }
+  }
+}

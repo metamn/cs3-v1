@@ -10,6 +10,10 @@
       @include sg-subtitle;
     }
     
+    &.description {
+      @include sg-description;
+    }
+    
     &.example {
       @include sg-example;
     }
@@ -17,13 +21,13 @@
     &.technical {
       @include sg-technical;
     }
-    
-    &.description {
-      @include sg-description;
-    }
 
     &.code {
       @include sg-code;
+    }
+    
+    &.accordion {
+      @include sg-accordion;
     }
   }
 }
