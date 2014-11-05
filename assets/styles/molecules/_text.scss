@@ -54,7 +54,11 @@
       @include directional-background-for-text(vertical);
     }
   }
-
+  
+  // Skills
+  @if ($type == skills) {
+    
+  }
 
   
   // About 

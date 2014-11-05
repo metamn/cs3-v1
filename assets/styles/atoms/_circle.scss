@@ -1,0 +1,15 @@
+@mixin circle($color-scheme, $size, $border-color: null) {
+  @include colors($color-scheme);
+  @include border-radius($size * 3);
+  
+  @if ($border-color != null) {
+    border-color: $border-color;
+    border: 2px solid;
+  }
+  
+  width: $size * 2 + $size/2;
+  height: $size * 2;
+  
+  padding-top: $size/2;
+  text-align: center;
+} 

@@ -1,0 +1,14 @@
+@mixin skills {
+  @include flexbox($justify-content: center);
+  @include colors(white-on-black);
+  @include texture(black);
+  
+  nav {
+    @include flexbox($wrap: nowrap, $justify-content: space-around);
+    max-width: $text-width;
+    
+    div {
+      @include circle(white-on-black, $lem / 2, bordered);
+    }
+  }
+}

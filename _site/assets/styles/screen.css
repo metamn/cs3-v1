@@ -97,6 +97,9 @@ html.frontpage body #about article { padding: 3.12em 1.56em; }
 html.frontpage body #about article p { font-family: "Europa", sans-serif; font-weight: 300; font-size: 1.3077em; max-width: 23.4em; }
 @media only screen and (min-width: 90em) { html.frontpage body #about article p { font-size: 1.6154em; } }
 html.frontpage body #about article p + p { margin-top: 1.56em; }
+html.frontpage body #skills { display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */ display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */ display: -ms-flexbox; /* TWEENER - IE 10 */ display: -webkit-flex; /* NEW - Chrome */ display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */ -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; -moz-justify-content: center; justify-content: center; color: #f9f9f9; background-color: #1a1a1a; background: url('http://its-csongor.com/assets/images/black-felt.png?1413122098'), #1a1a1a; }
+html.frontpage body #skills nav { display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */ display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */ display: -ms-flexbox; /* TWEENER - IE 10 */ display: -webkit-flex; /* NEW - Chrome */ display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */ -webkit-flex-wrap: nowrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; -ms-flex-pack: distribute; -webkit-justify-content: space-around; -moz-justify-content: space-around; justify-content: space-around; max-width: 23.4em; }
+html.frontpage body #skills nav div { color: #f9f9f9; background-color: #1a1a1a; -moz-border-radius: 2.34em; -webkit-border-radius: 2.34em; border-radius: 2.34em; border-color: bordered; border: 2px solid; width: 1.95em; height: 1.56em; padding-top: 0.39em; text-align: center; }
 
 html.portfolio.inu-chivu body section.portfolio-section.intro article.title { margin: auto 20%; }
 html.portfolio.inu-chivu body section.portfolio-section.intro article.title h1 { margin-bottom: 0.39em; padding-bottom: 0.39em; }

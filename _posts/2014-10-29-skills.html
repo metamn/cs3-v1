@@ -1,0 +1,19 @@
+---
+layout: none
+title: Skills
+category: skills
+skills:
+  - name: UI
+  - name: UX
+  - name: RWD
+  - name: CMS
+---
+
+<nav>
+  <h3>Skills navigation</h3>
+  
+  {% for skill in page.skills %}
+    {% include atoms/circle.html text=skill.name %}
+  {% endfor %}
+</nav>
+

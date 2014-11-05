@@ -8,5 +8,8 @@ html.frontpage {
       @include about;
     }
     
+    #skills {
+      @include skills;
+    }
   }
 }
