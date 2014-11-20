@@ -5,7 +5,7 @@
     h1 {
       @include font(title);
       //max-width: $text-width / 2;
-      border-bottom: 1px solid;
+      border-bottom: 1px solid $red;
       margin-bottom: $lem / 4;
       padding-bottom: $lem / 4;
     }

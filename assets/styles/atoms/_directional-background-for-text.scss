@@ -1,21 +1,19 @@
 @mixin directional-background-for-text($direction: right) {
 
-  $lightblack: $red;
-
   @if ($direction == right) {
-    background: repeating-linear-gradient(-55deg, $lightblack, $lightblack $lem/12, transparent 1px, transparent $lem);
+    background: repeating-linear-gradient(-55deg, $black, $black $lem/12, transparent 1px, transparent $lem);
   }
 
   @if ($direction == left) {
-    background: repeating-linear-gradient(55deg, $lightblack, $lightblack $lem/12, transparent 1px, transparent $lem);
+    background: repeating-linear-gradient(55deg, $black, $black $lem/12, transparent 1px, transparent $lem);
   }
 
   @if ($direction == vertical) {
-    background: repeating-linear-gradient(90deg, $lightblack, $lightblack $lem/12, transparent 1px, transparent $lem);
+    background: repeating-linear-gradient(90deg, $black, $black $lem/12, transparent 1px, transparent $lem);
   }
 
   @if ($direction == horizontal) {
-    background: repeating-linear-gradient(0deg, $lightblack, $lightblack $lem/12, transparent 1px, transparent $lem);
+    background: repeating-linear-gradient(0deg, $black, $black $lem/12, transparent 1px, transparent $lem);
   }
 
   padding: $lem;
@@ -24,9 +22,9 @@
   }
 
   p {
-    @include colors;
-    border: $lem/12 solid;
-    padding: $lem / 2;
+    @include colors(white-on-black);
+    //border: $lem/12 solid;
+    padding: $lem / 2 $lem;
 
     font-weight: 400;
     font-size: smaller;

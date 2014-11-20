@@ -116,13 +116,13 @@ html.portfolio.inu-chivu body section.portfolio-section.intro article.mockup { o
   html.portfolio.inu-chivu body section.portfolio-section.caption-1 article:nth-of-type(2) { margin-left: 4.68em; }
   html.portfolio.inu-chivu body section.portfolio-section.caption-1 article:nth-of-type(3) { position: relative; top: 340px; } }
 @media only screen and (min-width: 64em) { html.portfolio.inu-chivu body section.portfolio-section.caption-1 { margin-bottom: 4.68em; } }
-html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption { margin: auto 20%; background: repeating-linear-gradient(0deg, red, red 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; }
+html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption { margin: auto 20%; background: repeating-linear-gradient(0deg, #1a1a1a, #1a1a1a 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; }
 @media only screen and (min-width: 90em) { html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption { margin: auto 40%; } }
 @media only screen and (max-width: 37.499em) { html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption { padding: 1.56em; } }
-html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption p { color: #1a1a1a; background-color: #f9f9f9; border: 0.13em solid; padding: 0.78em; font-weight: 400; font-size: smaller; max-width: 11.7em; line-height: 1.3; }
-@media only screen and (max-width: 63.999em) { html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption { background: repeating-linear-gradient(90deg, red, red 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; } }
+html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption p { color: #f9f9f9; background-color: #1a1a1a; padding: 0.78em 1.56em; font-weight: 400; font-size: smaller; max-width: 11.7em; line-height: 1.3; }
+@media only screen and (max-width: 63.999em) { html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption { background: repeating-linear-gradient(90deg, #1a1a1a, #1a1a1a 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; } }
 @media only screen and (max-width: 63.999em) and (max-width: 37.499em) { html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption { padding: 1.56em; } }
-@media only screen and (max-width: 63.999em) { html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption p { color: #1a1a1a; background-color: #f9f9f9; border: 0.13em solid; padding: 0.78em; font-weight: 400; font-size: smaller; max-width: 11.7em; line-height: 1.3; } }
+@media only screen and (max-width: 63.999em) { html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption p { color: #f9f9f9; background-color: #1a1a1a; padding: 0.78em 1.56em; font-weight: 400; font-size: smaller; max-width: 11.7em; line-height: 1.3; } }
 @media only screen and (min-width: 64em) { html.portfolio.inu-chivu body section.portfolio-section.screenshots-1 { -webkit-flex-wrap: nowrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; } }
 @media only screen and (min-width: 64em) { html.portfolio.inu-chivu body section.portfolio-section.screenshots-2 { display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */ display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */ display: -ms-flexbox; /* TWEENER - IE 10 */ display: -webkit-flex; /* NEW - Chrome */ display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */ -webkit-flex-wrap: nowrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; -webkit-box-align: end; -ms-flex-align: end; -webkit-align-items: flex-end; -moz-align-items: flex-end; align-items: flex-end; } }
 
@@ -137,24 +137,24 @@ html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.captio
 html.portfolio body section.portfolio-section { display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */ display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */ display: -ms-flexbox; /* TWEENER - IE 10 */ display: -webkit-flex; /* NEW - Chrome */ display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */ -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; -moz-justify-content: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; -webkit-align-items: center; -moz-align-items: center; align-items: center; }
 html.portfolio body section.portfolio-section article.title, html.portfolio body section.portfolio-section article.description, html.portfolio body section.portfolio-section article.services { padding: 4.68em 1.56em; }
 html.portfolio body section.portfolio-section article.title { max-width: 23.4em; }
-html.portfolio body section.portfolio-section article.title h1 { font-family: "Europa", sans-serif; font-weight: 400; font-size: 1.6154em; line-height: 1.3; border-bottom: 1px solid; margin-bottom: 0.39em; padding-bottom: 0.39em; }
+html.portfolio body section.portfolio-section article.title h1 { font-family: "Europa", sans-serif; font-weight: 400; font-size: 1.6154em; line-height: 1.3; border-bottom: 1px solid red; margin-bottom: 0.39em; padding-bottom: 0.39em; }
 html.portfolio body section.portfolio-section article.title p { font-family: "Europa", sans-serif; font-weight: 400; font-size: smaller; text-transform: uppercase; letter-spacing: 1.1px; line-height: 1.3; }
 html.portfolio body section.portfolio-section article.title h1, html.portfolio body section.portfolio-section article.title p { text-align: center; }
 html.portfolio body section.portfolio-section article.description { background: repeating-linear-gradient(-55deg, #1a1a1a, #1a1a1a 0.13em, #f9f9f9 1px, #f9f9f9 7.8em); padding: 0; margin: 4.68em; }
 @media only screen and (max-width: 37.499em) { html.portfolio body section.portfolio-section article.description { margin: 1.56em; } }
-html.portfolio body section.portfolio-section article.description p { color: #1a1a1a; background-color: #f9f9f9; border: 0.13em solid; padding: 1.56em; font-weight: 400; max-width: 23.4em; }
+html.portfolio body section.portfolio-section article.description p { color: #1a1a1a; background-color: #f9f9f9; border: 0.13em solid #1a1a1a; padding: 1.56em; font-weight: 400; max-width: 23.4em; }
 html.portfolio body section.portfolio-section article.description p + p { margin-top: 1.56em; }
 html.portfolio body section.portfolio-section article.services { background: repeating-linear-gradient(-55deg, #1a1a1a, #1a1a1a 0.13em, #f9f9f9 1px, #f9f9f9 7.8em); padding: 0; margin: 4.68em; }
 @media only screen and (max-width: 37.499em) { html.portfolio body section.portfolio-section article.services { margin: 1.56em; } }
-html.portfolio body section.portfolio-section article.services p { color: #1a1a1a; background-color: #f9f9f9; border: 0.13em solid; padding: 1.56em; font-weight: 400; max-width: 23.4em; }
+html.portfolio body section.portfolio-section article.services p { color: #1a1a1a; background-color: #f9f9f9; border: 0.13em solid #1a1a1a; padding: 1.56em; font-weight: 400; max-width: 23.4em; }
 html.portfolio body section.portfolio-section article.services p + p { margin-top: 1.56em; }
 html.portfolio body section.portfolio-section article.services p span { font-family: "Europa", sans-serif; font-weight: 400; font-weight: 600; }
-html.portfolio body section.portfolio-section article.caption { background: repeating-linear-gradient(-55deg, red, red 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; }
+html.portfolio body section.portfolio-section article.caption { background: repeating-linear-gradient(-55deg, #1a1a1a, #1a1a1a 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; }
 @media only screen and (max-width: 37.499em) { html.portfolio body section.portfolio-section article.caption { padding: 1.56em; } }
-html.portfolio body section.portfolio-section article.caption p { color: #1a1a1a; background-color: #f9f9f9; border: 0.13em solid; padding: 0.78em; font-weight: 400; font-size: smaller; max-width: 11.7em; line-height: 1.3; }
-@media only screen and (max-width: 63.999em) { html.portfolio body section.portfolio-section article.caption { background: repeating-linear-gradient(90deg, red, red 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; } }
+html.portfolio body section.portfolio-section article.caption p { color: #f9f9f9; background-color: #1a1a1a; padding: 0.78em 1.56em; font-weight: 400; font-size: smaller; max-width: 11.7em; line-height: 1.3; }
+@media only screen and (max-width: 63.999em) { html.portfolio body section.portfolio-section article.caption { background: repeating-linear-gradient(90deg, #1a1a1a, #1a1a1a 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; } }
 @media only screen and (max-width: 63.999em) and (max-width: 37.499em) { html.portfolio body section.portfolio-section article.caption { padding: 1.56em; } }
-@media only screen and (max-width: 63.999em) { html.portfolio body section.portfolio-section article.caption p { color: #1a1a1a; background-color: #f9f9f9; border: 0.13em solid; padding: 0.78em; font-weight: 400; font-size: smaller; max-width: 11.7em; line-height: 1.3; } }
+@media only screen and (max-width: 63.999em) { html.portfolio body section.portfolio-section article.caption p { color: #f9f9f9; background-color: #1a1a1a; padding: 0.78em 1.56em; font-weight: 400; font-size: smaller; max-width: 11.7em; line-height: 1.3; } }
 html.portfolio body section.portfolio-section article.mockup { padding: 0.78em; }
 html.portfolio body section.portfolio-section article.mockup figure.mobile { max-width: 320px; }
 html.portfolio body #works { border-top: 1px solid; }
@@ -172,9 +172,9 @@ html.portfolio.smuff body section.portfolio-section.intro article.title h1 { mar
 @media only screen and (min-width: 90em) { html.portfolio.smuff body section.portfolio-section.intro article.mockup img { max-width: 500px; } }
 @media only screen and (min-width: 37.5em) and (max-width: 63.999em) { html.portfolio.smuff body section.portfolio-section.screenshots-1, html.portfolio.smuff body section.portfolio-section.screenshots-2 { -webkit-flex-wrap: nowrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; } }
 @media only screen and (min-width: 64em) { html.portfolio.smuff body section.portfolio-section.screenshots-1, html.portfolio.smuff body section.portfolio-section.screenshots-2 { -webkit-flex-wrap: nowrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; } }
-html.portfolio.smuff body section.portfolio-section.caption article.caption { background: repeating-linear-gradient(90deg, red, red 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; }
+html.portfolio.smuff body section.portfolio-section.caption article.caption { background: repeating-linear-gradient(90deg, #1a1a1a, #1a1a1a 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; }
 @media only screen and (max-width: 37.499em) { html.portfolio.smuff body section.portfolio-section.caption article.caption { padding: 1.56em; } }
-html.portfolio.smuff body section.portfolio-section.caption article.caption p { color: #1a1a1a; background-color: #f9f9f9; border: 0.13em solid; padding: 0.78em; font-weight: 400; font-size: smaller; max-width: 11.7em; line-height: 1.3; }
+html.portfolio.smuff body section.portfolio-section.caption article.caption p { color: #f9f9f9; background-color: #1a1a1a; padding: 0.78em 1.56em; font-weight: 400; font-size: smaller; max-width: 11.7em; line-height: 1.3; }
 
 html.styleguide body { display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */ display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */ display: -ms-flexbox; /* TWEENER - IE 10 */ display: -webkit-flex; /* NEW - Chrome */ display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */ }
 @media only screen and (max-width: 63.999em) { html.styleguide body { -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; } }
