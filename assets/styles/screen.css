@@ -114,11 +114,11 @@ html.portfolio.inu-chivu body section.portfolio-section.intro article.mockup { o
   html.portfolio.inu-chivu body section.portfolio-section.caption-1 article:nth-of-type(2) { margin-left: 4.68em; }
   html.portfolio.inu-chivu body section.portfolio-section.caption-1 article:nth-of-type(3) { position: relative; top: 340px; } }
 @media only screen and (min-width: 64em) { html.portfolio.inu-chivu body section.portfolio-section.caption-1 { margin-bottom: 4.68em; } }
-html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption { margin: auto 20%; background: repeating-linear-gradient(0deg, #1a1a1a, #1a1a1a 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; }
+html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption { margin: auto 20%; background: repeating-linear-gradient(0deg, red, red 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; }
 @media only screen and (min-width: 90em) { html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption { margin: auto 40%; } }
 @media only screen and (max-width: 37.499em) { html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption { padding: 1.56em; } }
 html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption p { color: #1a1a1a; background-color: #f9f9f9; border: 0.13em solid; padding: 0.78em; font-weight: 400; font-size: smaller; max-width: 11.7em; line-height: 1.3; }
-@media only screen and (max-width: 63.999em) { html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption { background: repeating-linear-gradient(90deg, #1a1a1a, #1a1a1a 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; } }
+@media only screen and (max-width: 63.999em) { html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption { background: repeating-linear-gradient(90deg, red, red 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; } }
 @media only screen and (max-width: 63.999em) and (max-width: 37.499em) { html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption { padding: 1.56em; } }
 @media only screen and (max-width: 63.999em) { html.portfolio.inu-chivu body section.portfolio-section.caption-1 article.caption p { color: #1a1a1a; background-color: #f9f9f9; border: 0.13em solid; padding: 0.78em; font-weight: 400; font-size: smaller; max-width: 11.7em; line-height: 1.3; } }
 @media only screen and (min-width: 64em) { html.portfolio.inu-chivu body section.portfolio-section.screenshots-1 { -webkit-flex-wrap: nowrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; } }
@@ -147,10 +147,10 @@ html.portfolio body section.portfolio-section article.services { background: rep
 html.portfolio body section.portfolio-section article.services p { color: #1a1a1a; background-color: #f9f9f9; border: 0.13em solid; padding: 1.56em; font-weight: 400; max-width: 23.4em; }
 html.portfolio body section.portfolio-section article.services p + p { margin-top: 1.56em; }
 html.portfolio body section.portfolio-section article.services p span { font-family: "Europa", sans-serif; font-weight: 400; font-weight: 600; }
-html.portfolio body section.portfolio-section article.caption { background: repeating-linear-gradient(-55deg, #1a1a1a, #1a1a1a 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; }
+html.portfolio body section.portfolio-section article.caption { background: repeating-linear-gradient(-55deg, red, red 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; }
 @media only screen and (max-width: 37.499em) { html.portfolio body section.portfolio-section article.caption { padding: 1.56em; } }
 html.portfolio body section.portfolio-section article.caption p { color: #1a1a1a; background-color: #f9f9f9; border: 0.13em solid; padding: 0.78em; font-weight: 400; font-size: smaller; max-width: 11.7em; line-height: 1.3; }
-@media only screen and (max-width: 63.999em) { html.portfolio body section.portfolio-section article.caption { background: repeating-linear-gradient(90deg, #1a1a1a, #1a1a1a 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; } }
+@media only screen and (max-width: 63.999em) { html.portfolio body section.portfolio-section article.caption { background: repeating-linear-gradient(90deg, red, red 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; } }
 @media only screen and (max-width: 63.999em) and (max-width: 37.499em) { html.portfolio body section.portfolio-section article.caption { padding: 1.56em; } }
 @media only screen and (max-width: 63.999em) { html.portfolio body section.portfolio-section article.caption p { color: #1a1a1a; background-color: #f9f9f9; border: 0.13em solid; padding: 0.78em; font-weight: 400; font-size: smaller; max-width: 11.7em; line-height: 1.3; } }
 html.portfolio body section.portfolio-section article.mockup { padding: 0.78em; }
@@ -170,6 +170,6 @@ html.portfolio.smuff body section.portfolio-section.intro article.title h1 { mar
 @media only screen and (min-width: 90em) { html.portfolio.smuff body section.portfolio-section.intro article.mockup img { max-width: 500px; } }
 @media only screen and (min-width: 37.5em) and (max-width: 63.999em) { html.portfolio.smuff body section.portfolio-section.screenshots-1, html.portfolio.smuff body section.portfolio-section.screenshots-2 { -webkit-flex-wrap: nowrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; } }
 @media only screen and (min-width: 64em) { html.portfolio.smuff body section.portfolio-section.screenshots-1, html.portfolio.smuff body section.portfolio-section.screenshots-2 { -webkit-flex-wrap: nowrap; -ms-flex-wrap: nowrap; flex-wrap: nowrap; } }
-html.portfolio.smuff body section.portfolio-section.caption article.caption { background: repeating-linear-gradient(90deg, #1a1a1a, #1a1a1a 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; }
+html.portfolio.smuff body section.portfolio-section.caption article.caption { background: repeating-linear-gradient(90deg, red, red 0.13em, transparent 1px, transparent 1.56em); padding: 1.56em; }
 @media only screen and (max-width: 37.499em) { html.portfolio.smuff body section.portfolio-section.caption article.caption { padding: 1.56em; } }
 html.portfolio.smuff body section.portfolio-section.caption article.caption p { color: #1a1a1a; background-color: #f9f9f9; border: 0.13em solid; padding: 0.78em; font-weight: 400; font-size: smaller; max-width: 11.7em; line-height: 1.3; }
