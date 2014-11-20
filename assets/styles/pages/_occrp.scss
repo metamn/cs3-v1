@@ -1,12 +1,23 @@
 html.portfolio.organized-crime-and-corruption-reporting-project {
   body {
     section.portfolio-section {
+      &.intro {
+        article {
+          &.title {
+            @include mobile {
+              padding-top: $lem * 3;
+              padding-bottom: $lem * 3;
+            }
+          }
+        }
+      }
+      
       &.screenshots-1, &.screenshots-2  {
         @include laptop-and-up {
           @include flexbox-wrap(nowrap);
         }
       }
-      
+
       &.services {
         article {
           &.mockup {

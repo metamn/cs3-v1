@@ -1,3 +1,4 @@
 @mixin portfolio-title {
+  max-width: $text-width;
   @include text(portfolio-title);
 }
