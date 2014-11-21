@@ -1,6 +1,7 @@
 
 @mixin footer {
   @include works;
+  @include colors(white-on-black);
 
   article {
     figure {
