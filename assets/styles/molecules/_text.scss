@@ -99,5 +99,9 @@
   @if ($type == reset-thumb) {
     border-top: none;
     padding-top: none;
+
+    p {
+      max-width: none;
+    }
   }
 }

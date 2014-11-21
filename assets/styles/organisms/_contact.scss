@@ -1,5 +1,19 @@
 @mixin contact {
   aside {
-    
+    p {
+      span {
+        display: inline-block;
+        margin-right: $lem / 2;
+
+        &:last-of-type {
+          font-style: italic;
+          text-transform: none;
+          font-size: smaller;
+
+          position: relative;
+          top: -$lem / 3;
+        }
+      }
+    }
   }
 }

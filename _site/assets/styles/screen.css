@@ -82,6 +82,10 @@ html body footer article aside p { max-width: 280px; font-family: "Europa", sans
 html body footer article.current { opacity: .6; }
 html body footer article figure { visibility: hidden; }
 html body footer article aside { border-top: none; padding-top: none; }
+html body footer article aside p { max-width: none; }
+html body footer article:nth-of-type(2) aside p span { display: inline-block; margin-right: 0.78em; }
+html body footer article:nth-of-type(2) aside p span:last-of-type { font-style: italic; text-transform: none; font-size: smaller; position: relative; top: -0.52em; }
+html body footer article:nth-of-type(1) aside p { color: #f9f9f9; background-color: #1a1a1a; padding: 0.39em 0.78em; }
 
 html.frontpage body #featured-image { display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */ display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */ display: -ms-flexbox; /* TWEENER - IE 10 */ display: -webkit-flex; /* NEW - Chrome */ display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */ -webkit-box-pack: center; -ms-flex-pack: center; -webkit-justify-content: center; -moz-justify-content: center; justify-content: center; }
 html.frontpage body #featured-image article { overflow: hidden; padding: 0; }
