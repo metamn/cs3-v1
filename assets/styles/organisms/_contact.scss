@@ -1,25 +1,5 @@
 @mixin contact {
-  ul {
-    li {
-      text-align: center;
-      // Make some room between items. It's a must on mobiles
-      line-height: 1.5; 
-      
-      // Align "@metamn" to "Visit Portfolio" button
-      &:last-of-type {
-        margin-bottom: $lem / 2;
-      }
-    }
-  }
-  
   aside {
-    padding-top: $lem / 4;
     
-    // Align "Your next project ..." to "Visit styleguide" button
-    p {
-      @include button;
-      border: none;
-      max-width: none;
-    }
   }
 }

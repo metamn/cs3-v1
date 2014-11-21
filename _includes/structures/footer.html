@@ -1,4 +1,24 @@
 <footer>
-    {% include organisms/contact.html %}
+
+  {% for post in site.posts limit: 1 offset:5 %}
+    {% if post.category != "skills" %}
+
+      {% capture description %}
+        {% include organisms/contact.html %}
+      {% endcapture %}
+      {% include molecules/mockup.html id="0" source=post description=description %}
+
+    {% endif %}
+  {% endfor %}
+
+  {% for post in site.posts limit: 1 offset:4 %}
+    {% if post.category != "skills" %}
+
+      {% capture description %}
+        {% include organisms/quotes.html %}
+      {% endcapture %}
+      {% include molecules/mockup.html id="0" source=post description=description %}
+
+    {% endif %}
+  {% endfor %}
 </footer>
-  

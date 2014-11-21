@@ -94,4 +94,10 @@
       }
     }
   }
+
+  // Reset portfolio thumb caption
+  @if ($type == reset-thumb) {
+    border-top: none;
+    padding-top: none;
+  }
 }
